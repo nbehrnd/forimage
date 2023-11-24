@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="Documentation for ForImage">
+    <meta name="author" content="Seyed Ali Ghasemi" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>xyz_to_rgb &ndash; ForImage</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+      <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.0.slim.min.js" integrity="sha256-tG5mcZUtJsZvyKAxYLVXrmjKBVLd6VpVccqz/r4ypFE=" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="container-fluid mb-sm-4 mb-xl-2">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">ForImage <small>0.3.0</small></a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+          </button>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="../lists/files.html">Source Files</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/modules.html">Modules</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/procedures.html">Procedures</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/types.html">Derived Types</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/programs.html">Programs</a>
+                </li>
+            </ul>
+              <div class="d-flex align-items-end flex-grow-1">
+                <form action="../search.html" role="search" class="ms-auto">
+                  <input type="text" class="form-control" aria-label="Search" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                </form>
+              </div>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+  <div class="row">
+    <h1>xyz_to_rgb
+      <small>Subroutine</small>
+      
+    </h1>
+      <div class="container p-2 mb-4 bg-light border rounded-3">
+    <div class="row align-items-center justify-content-between" id="info-bar">
+      <div class="col">
+        <ul class="list-inline" style="margin-bottom:0px;display:inline">
+            <li class="list-inline-item" id="meta-author"><i class="fa fa-pencil"></i> Seyed Ali Ghasemi</li>
+
+            <li class="list-inline-item" id="statements"><i class="fa fa-list-ol"></i>
+              <a data-bs-toggle="tooltip"
+                 data-bs-placement="bottom" data-html="true"
+                 title=" 2.0% of total for procedures.">30 statements</a>
+            </li>
+
+            <li class="list-inline-item" id="source-file">
+              <i class="fa fa-code"></i>
+              <a href="../src/forcolor.f90"> Source File</a>
+            </li>
+        </ul>
+      </div>
+      <div class="col">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-end mb-0">
+                <li class="breadcrumb-item"><a href='../sourcefile/forcolor.f90.html'>forcolor.f90</a></li>
+                <li class="breadcrumb-item"><a href='../module/forcolor.html'>forcolor</a></li>
+            <li class="breadcrumb-item active" aria-current="page">xyz_to_rgb</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(function () {
+    $('[data-bs-toggle="tooltip"]').tooltip()
+    })
+  </script>
+
+  </div>
+  
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+      <div id="sidebar">
+      <h3>Contents</h3>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    <div class="card card-primary">
+      <div class="card-header text-left"><h3 class="card-title">Source Code</h3></div>
+      <div class="list-group">
+        <a class="list-group-item" href="../proc/xyz_to_rgb.html#src">xyz_to_rgb</a>
+      </div>
+    </div>
+
+
+  </div>
+
+    </div>
+    
+    <div class="col-md-9" id='text'>
+    <h2>private pure elemental subroutine xyz_to_rgb(x, y, z, r, g, b)  
+</h2>
+    
+
+
+
+    <h3>Arguments</h3>
+        <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-x~4"></span>
+              real(kind=rk),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>x</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-y~11"></span>
+              real(kind=rk),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>y</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-z~4"></span>
+              real(kind=rk),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>z</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-r~18"></span>
+              integer(kind=ik),
+            </td>
+<td>intent(out)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>r</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-g~18"></span>
+              integer(kind=ik),
+            </td>
+<td>intent(out)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>g</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-b~18"></span>
+              integer(kind=ik),
+            </td>
+<td>intent(out)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>b</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <br>
+    <div class="card">
+      <div class="card-header">
+  <h3 class="card-title">Called by</h3>
+      </div>
+      <div class="card-body">
+  <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.43.0 (0)
+ -->
+<!-- Title: proc~~xyz_to_rgb~~CalledByGraph Pages: 1 -->
+<svg id="procxyz_to_rgbCalledByGraph" width="641pt" height="142pt"
+ viewBox="0.00 0.00 641.00 141.69" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="proc~~xyz_to_rgb~~CalledByGraph" class="graph" transform="scale(1.39 1.39) rotate(0) translate(4 193.17)">
+<title>proc~~xyz_to_rgb~~CalledByGraph</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-193.17 888,-193.17 888,4 -4,4"/>
+<!-- proc~xyz_to_rgb -->
+<g id="proc~~xyz_to_rgb~~CalledByGraph_node1" class="node">
+<title>proc~xyz_to_rgb</title>
+<polygon fill="none" stroke="black" points="859,-165.23 741,-165.23 741,-141.23 859,-141.23 859,-165.23"/>
+<text text-anchor="middle" x="800" y="-150.83" font-family="Helvetica,sans-Serif" font-size="10.50">forcolor::xyz_to_rgb</text>
+</g>
+<!-- proc~convert -->
+<g id="proc~~xyz_to_rgb~~CalledByGraph_node2" class="node">
+<title>proc~convert</title>
+<g id="a_proc~~xyz_to_rgb~~CalledByGraph_node2"><a xlink:href=".././proc/convert.html" xlink:title="forcolor::color%convert">
+<polygon fill="#d9534f" stroke="#d9534f" points="680,-165.23 541,-165.23 541,-141.23 680,-141.23 680,-165.23"/>
+<text text-anchor="middle" x="610.5" y="-150.83" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">forcolor::color%convert</text>
+</a>
+</g>
+</g>
+<!-- proc~convert&#45;&gt;proc~xyz_to_rgb -->
+<g id="proc~~xyz_to_rgb~~CalledByGraph_edge1" class="edge">
+<title>proc~convert&#45;&gt;proc~xyz_to_rgb</title>
+<path fill="none" stroke="#255000" d="M680.25,-153.23C696.7,-153.23 714.25,-153.23 730.68,-153.23"/>
+<polygon fill="#255000" stroke="#255000" points="730.74,-156.73 740.74,-153.23 730.74,-149.73 730.74,-156.73"/>
+</g>
+<!-- proc~initialize_colors -->
+<g id="proc~~xyz_to_rgb~~CalledByGraph_node3" class="node">
+<title>proc~initialize_colors</title>
+<g id="a_proc~~xyz_to_rgb~~CalledByGraph_node3"><a xlink:href=".././proc/initialize_colors.html" xlink:title="forcolor::initialize_colors">
+<polygon fill="#d9534f" stroke="#d9534f" points="505,-104.23 362,-104.23 362,-80.23 505,-80.23 505,-104.23"/>
+<text text-anchor="middle" x="433.5" y="-89.83" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">forcolor::initialize_colors</text>
+</a>
+</g>
+</g>
+<!-- proc~initialize_colors&#45;&gt;proc~convert -->
+<g id="proc~~xyz_to_rgb~~CalledByGraph_edge2" class="edge">
+<title>proc~initialize_colors&#45;&gt;proc~convert</title>
+<path fill="none" stroke="#255000" d="M469.07,-104.29C496.64,-113.89 535.43,-127.41 565.25,-137.81"/>
+<polygon fill="#255000" stroke="#255000" points="564.4,-141.22 575,-141.21 566.71,-134.61 564.4,-141.22"/>
+</g>
+<!-- proc~set -->
+<g id="proc~~xyz_to_rgb~~CalledByGraph_node9" class="node">
+<title>proc~set</title>
+<g id="a_proc~~xyz_to_rgb~~CalledByGraph_node9"><a xlink:href=".././proc/set.html" xlink:title="forcolor::color%set">
+<polygon fill="#d9534f" stroke="#d9534f" points="667.5,-64.23 553.5,-64.23 553.5,-40.23 667.5,-40.23 667.5,-64.23"/>
+<text text-anchor="middle" x="610.5" y="-49.83" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">forcolor::color%set</text>
+</a>
+</g>
+</g>
+<!-- proc~initialize_colors&#45;&gt;proc~set -->
+<g id="proc~~xyz_to_rgb~~CalledByGraph_edge12" class="edge">
+<title>proc~initialize_colors&#45;&gt;proc~set</title>
+<path fill="none" stroke="#255000" d="M487.01,-80.23C505.87,-75.92 527.33,-71.02 546.96,-66.53"/>
+<polygon fill="#255000" stroke="#255000" points="547.76,-69.94 556.73,-64.3 546.2,-63.11 547.76,-69.94"/>
+</g>
+<!-- program~demo_color -->
+<g id="proc~~xyz_to_rgb~~CalledByGraph_node4" class="node">
+<title>program~demo_color</title>
+<g id="a_proc~~xyz_to_rgb~~CalledByGraph_node4"><a xlink:href=".././program/demo_color.html" xlink:title="demo_color">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="76,-104.23 0,-104.23 0,-80.23 76,-80.23 76,-104.23"/>
+<text text-anchor="middle" x="38" y="-89.83" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">demo_color</text>
+</a>
+</g>
+</g>
+<!-- program~demo_color&#45;&gt;proc~convert -->
+<g id="proc~~xyz_to_rgb~~CalledByGraph_edge3" class="edge">
+<title>program~demo_color&#45;&gt;proc~convert</title>
+<path fill="none" stroke="#255000" d="M48.27,-104.36C60.79,-119.63 84.7,-145.08 112,-155.23 259.78,-210.18 449.76,-185.75 546.62,-167.21"/>
+<polygon fill="#255000" stroke="#255000" points="547.41,-170.62 556.55,-165.27 546.06,-163.75 547.41,-170.62"/>
+</g>
+<!-- proc~find_nearest -->
+<g id="proc~~xyz_to_rgb~~CalledByGraph_node5" class="node">
+<title>proc~find_nearest</title>
+<g id="a_proc~~xyz_to_rgb~~CalledByGraph_node5"><a xlink:href=".././proc/find_nearest.html" xlink:title="forcolor::color%find_nearest">
+<polygon fill="#d9534f" stroke="#d9534f" points="300.5,-146.23 137.5,-146.23 137.5,-122.23 300.5,-122.23 300.5,-146.23"/>
+<text text-anchor="middle" x="219" y="-131.83" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">forcolor::color%find_nearest</text>
+</a>
+</g>
+</g>
+<!-- program~demo_color&#45;&gt;proc~find_nearest -->
+<g id="proc~~xyz_to_rgb~~CalledByGraph_edge8" class="edge">
+<title>program~demo_color&#45;&gt;proc~find_nearest</title>
+<path fill="none" stroke="#255000" d="M76.35,-103.64C87.74,-106.94 100.34,-110.41 112,-113.23 121.95,-115.65 132.47,-117.98 142.87,-120.17"/>
+<polygon fill="#255000" stroke="#255000" points="142.28,-123.62 152.78,-122.22 143.7,-116.77 142.28,-123.62"/>
+</g>
+<!-- proc~print_available_colors -->
+<g id="proc~~xyz_to_rgb~~CalledByGraph_node6" class="node">
+<title>proc~print_available_colors</title>
+<g id="a_proc~~xyz_to_rgb~~CalledByGraph_node6"><a xlink:href=".././proc/print_available_colors.html" xlink:title="forcolor::color%print_available_colors">
+<polygon fill="#d9534f" stroke="#d9534f" points="326,-104.23 112,-104.23 112,-80.23 326,-80.23 326,-104.23"/>
+<text text-anchor="middle" x="219" y="-89.83" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">forcolor::color%print_available_colors</text>
+</a>
+</g>
+</g>
+<!-- program~demo_color&#45;&gt;proc~print_available_colors -->
+<g id="proc~~xyz_to_rgb~~CalledByGraph_edge9" class="edge">
+<title>program~demo_color&#45;&gt;proc~print_available_colors</title>
+<path fill="none" stroke="transparent" d="M76.09,-92.23C83.99,-92.23 92.72,-92.23 101.87,-92.23"/>
+<polygon fill="transparent" stroke="transparent" points="101.93,-95.73 111.93,-92.23 101.93,-88.73 101.93,-95.73"/>
+</g>
+<!-- proc~save_available_colors -->
+<g id="proc~~xyz_to_rgb~~CalledByGraph_node7" class="node">
+<title>proc~save_available_colors</title>
+<g id="a_proc~~xyz_to_rgb~~CalledByGraph_node7"><a xlink:href=".././proc/save_available_colors.html" xlink:title="forcolor::color%save_available_colors">
+<polygon fill="#d9534f" stroke="#d9534f" points="326,-62.23 112,-62.23 112,-38.23 326,-38.23 326,-62.23"/>
+<text text-anchor="middle" x="219" y="-47.83" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">forcolor::color%save_available_colors</text>
+</a>
+</g>
+</g>
+<!-- program~demo_color&#45;&gt;proc~save_available_colors -->
+<g id="proc~~xyz_to_rgb~~CalledByGraph_edge10" class="edge">
+<title>program~demo_color&#45;&gt;proc~save_available_colors</title>
+<path fill="none" stroke="#025525" stroke-opacity="0.019608" d="M76.35,-80.83C87.74,-77.53 100.34,-74.06 112,-71.23 121.95,-68.82 132.47,-66.49 142.87,-64.3"/>
+<polygon fill="#025525" fill-opacity="0.019608" stroke="#025525" stroke-opacity="0.019608" points="143.7,-67.7 152.78,-62.25 142.28,-60.85 143.7,-67.7"/>
+</g>
+<!-- program~demo_color&#45;&gt;proc~set -->
+<g id="proc~~xyz_to_rgb~~CalledByGraph_edge13" class="edge">
+<title>program~demo_color&#45;&gt;proc~set</title>
+<path fill="none" stroke="#255000" d="M48.27,-80.11C60.79,-64.84 84.7,-39.39 112,-29.23 267.06,28.42 468.23,-12.95 559.98,-37.53"/>
+<polygon fill="#255000" stroke="#255000" points="559.26,-40.96 569.83,-40.22 561.1,-34.21 559.26,-40.96"/>
+</g>
+<!-- proc~find_nearest&#45;&gt;proc~initialize_colors -->
+<g id="proc~~xyz_to_rgb~~CalledByGraph_edge4" class="edge">
+<title>proc~find_nearest&#45;&gt;proc~initialize_colors</title>
+<path fill="none" stroke="#255000" d="M280.89,-122.2C306.12,-117.21 335.55,-111.4 361.74,-106.22"/>
+<polygon fill="#255000" stroke="#255000" points="362.47,-109.64 371.6,-104.27 361.11,-102.78 362.47,-109.64"/>
+</g>
+<!-- proc~print_available_colors&#45;&gt;proc~initialize_colors -->
+<g id="proc~~xyz_to_rgb~~CalledByGraph_edge5" class="edge">
+<title>proc~print_available_colors&#45;&gt;proc~initialize_colors</title>
+<path fill="none" stroke="#255000" d="M326.25,-92.23C334.81,-92.23 343.36,-92.23 351.7,-92.23"/>
+<polygon fill="#255000" stroke="#255000" points="351.74,-95.73 361.74,-92.23 351.74,-88.73 351.74,-95.73"/>
+</g>
+<!-- proc~save_available_colors&#45;&gt;proc~initialize_colors -->
+<g id="proc~~xyz_to_rgb~~CalledByGraph_edge6" class="edge">
+<title>proc~save_available_colors&#45;&gt;proc~initialize_colors</title>
+<path fill="none" stroke="#255000" d="M280.89,-62.27C306.12,-67.26 335.55,-73.07 361.74,-78.25"/>
+<polygon fill="#255000" stroke="#255000" points="361.11,-81.69 371.6,-80.2 362.47,-74.82 361.11,-81.69"/>
+</g>
+<!-- proc~set_by_name -->
+<g id="proc~~xyz_to_rgb~~CalledByGraph_node8" class="node">
+<title>proc~set_by_name</title>
+<g id="a_proc~~xyz_to_rgb~~CalledByGraph_node8"><a xlink:href=".././proc/set_by_name.html" xlink:title="forcolor::color%set_by_name">
+<polygon fill="#d9534f" stroke="#d9534f" points="884,-84.23 716,-84.23 716,-60.23 884,-60.23 884,-84.23"/>
+<text text-anchor="middle" x="800" y="-69.83" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">forcolor::color%set_by_name</text>
+</a>
+</g>
+</g>
+<!-- proc~set_by_name&#45;&gt;proc~initialize_colors -->
+<g id="proc~~xyz_to_rgb~~CalledByGraph_edge7" class="edge">
+<title>proc~set_by_name&#45;&gt;proc~initialize_colors</title>
+<path fill="none" stroke="#255000" d="M715.72,-76.8C655.6,-80.1 574.87,-84.53 515.32,-87.8"/>
+<polygon fill="#255000" stroke="#255000" points="515,-84.31 505.21,-88.35 515.39,-91.3 515,-84.31"/>
+</g>
+<!-- proc~set&#45;&gt;proc~set_by_name -->
+<g id="proc~~xyz_to_rgb~~CalledByGraph_edge11" class="edge">
+<title>proc~set&#45;&gt;proc~set_by_name</title>
+<path fill="none" stroke="#127025" stroke-opacity="0.019608" d="M667.5,-58.21C679.63,-59.5 692.76,-60.9 705.88,-62.3"/>
+<polygon fill="#127025" fill-opacity="0.019608" stroke="#127025" stroke-opacity="0.019608" points="705.58,-65.79 715.89,-63.37 706.32,-58.83 705.58,-65.79"/>
+</g>
+</g>
+</svg>
+</div>                <script>
+                  var panprocxyz_to_rgbCalledByGraph = svgPanZoom('#procxyz_to_rgbCalledByGraph',
+                    {zoomEnabled: true, controlIconsEnabled: true, fit: true, center: true,}
+                  );
+                </script>        <div><a type="button" class="graph-help" data-toggle="modal" href="#CalledByGraph-help-text">Help</a></div>
+          <div class="modal fade" id="CalledByGraph-help-text" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                  <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
+                </div>
+              <div class="modal-body">
+<p>Nodes of different colours represent the following: </p>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.43.0 (0)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="641pt" height="28pt"
+ viewBox="0.00 0.00 641.00 27.51" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1.16 1.16) rotate(0) translate(4 28)">
+<title>Graph Key</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-28 741.5,-28 741.5,4 -4,4"/>
+<!-- Subroutine -->
+<g id="node1" class="node">
+<title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="70,-24 0,-24 0,0 70,0 70,-24"/>
+<text text-anchor="middle" x="35" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node2" class="node">
+<title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="146,-24 88,-24 88,0 146,0 146,-24"/>
+<text text-anchor="middle" x="117" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Function</text>
+</g>
+<!-- Interface -->
+<g id="node3" class="node">
+<title>Interface</title>
+<polygon fill="#a7506f" stroke="#a7506f" points="225.5,-24 164.5,-24 164.5,0 225.5,0 225.5,-24"/>
+<text text-anchor="middle" x="195" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Interface</text>
+</g>
+<!-- Type Bound Procedure -->
+<g id="node4" class="node">
+<title>Type Bound Procedure</title>
+<polygon fill="#a7506f" stroke="#a7506f" points="374,-24 244,-24 244,0 374,0 374,-24"/>
+<text text-anchor="middle" x="309" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Type Bound Procedure</text>
+</g>
+<!-- Unknown Procedure Type -->
+<g id="node5" class="node">
+<title>Unknown Procedure Type</title>
+<polygon fill="#777777" stroke="#777777" points="537.5,-24 392.5,-24 392.5,0 537.5,0 537.5,-24"/>
+<text text-anchor="middle" x="465" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Unknown Procedure Type</text>
+</g>
+<!-- Program -->
+<g id="node6" class="node">
+<title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="614,-24 556,-24 556,0 614,0 614,-24"/>
+<text text-anchor="middle" x="585" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node7" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="black" points="737.5,-24 632.5,-24 632.5,0 737.5,0 737.5,-24"/>
+<text text-anchor="middle" x="685" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+<p>Solid arrows point from a procedure to one which it calls. Dashed 
+arrows point from an interface to procedures which implement that interface.
+This could include the module procedures in a generic interface or the
+implementation in a submodule of an interface in a parent module.
+</p>
+ Where possible, edges connecting nodes are
+given different colours to make them easier to distinguish in
+large graphs.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    <section>
+    <h2><span class="anchor" id="src"></span>Source Code</h2>
+    <div class="hl codehilite"><pre><span></span><span class="w">   </span><span class="k">elemental pure subroutine </span><span class="n">xyz_to_rgb</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">z</span><span class="p">,</span><span class="w"> </span><span class="n">r</span><span class="p">,</span><span class="w"> </span><span class="n">g</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">)</span>
+<span class="w">      </span><span class="kt">real</span><span class="p">(</span><span class="n">rk</span><span class="p">),</span><span class="w"> </span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">z</span>
+<span class="w">      </span><span class="kt">integer</span><span class="p">(</span><span class="n">ik</span><span class="p">),</span><span class="w"> </span><span class="k">intent</span><span class="p">(</span><span class="n">out</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">r</span><span class="p">,</span><span class="w"> </span><span class="n">g</span><span class="p">,</span><span class="w"> </span><span class="n">b</span>
+<span class="w">      </span><span class="kt">real</span><span class="p">(</span><span class="n">rk</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">rn</span><span class="p">,</span><span class="w"> </span><span class="n">gn</span><span class="p">,</span><span class="w"> </span><span class="n">bn</span>
+<span class="w">      </span><span class="kt">real</span><span class="p">(</span><span class="n">rk</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">x1</span><span class="p">,</span><span class="w"> </span><span class="n">y1</span><span class="p">,</span><span class="w"> </span><span class="n">z1</span>
+
+<span class="w">      </span><span class="n">x1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="o">/</span><span class="mi">10</span><span class="mf">0.0_rk</span>
+<span class="w">      </span><span class="n">y1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">y</span><span class="o">/</span><span class="mi">10</span><span class="mf">0.0_rk</span>
+<span class="w">      </span><span class="n">z1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">z</span><span class="o">/</span><span class="mi">10</span><span class="mf">0.0_rk</span>
+
+<span class="w">      </span><span class="c">! Convert XYZ to linear RGB</span>
+<span class="w">      </span><span class="n">rn</span><span class="w"> </span><span class="o">=</span><span class="w">  </span><span class="mf">3.2404542_rk</span><span class="o">*</span><span class="n">x1</span><span class="w">  </span><span class="o">-</span><span class="mf">1.5371385_rk</span><span class="o">*</span><span class="n">y1</span><span class="w"> </span><span class="o">-</span><span class="mf">0.4985314_rk</span><span class="o">*</span><span class="n">z1</span>
+<span class="w">      </span><span class="n">gn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="mf">0.9692660_rk</span><span class="o">*</span><span class="n">x1</span><span class="w">  </span><span class="o">+</span><span class="mf">1.8760108_rk</span><span class="o">*</span><span class="n">y1</span><span class="w"> </span><span class="o">+</span><span class="mf">0.0415560_rk</span><span class="o">*</span><span class="n">z1</span>
+<span class="w">      </span><span class="n">bn</span><span class="w"> </span><span class="o">=</span><span class="w">  </span><span class="mf">0.0556434_rk</span><span class="o">*</span><span class="n">x1</span><span class="w">  </span><span class="o">-</span><span class="mf">0.2040259_rk</span><span class="o">*</span><span class="n">y1</span><span class="w"> </span><span class="o">+</span><span class="mf">1.0572252_rk</span><span class="o">*</span><span class="n">z1</span>
+
+<span class="w">      </span><span class="c">! Apply gamma correction</span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">rn</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mf">0.0031308_rk</span><span class="p">)</span><span class="w"> </span><span class="k">then</span>
+<span class="k">         </span><span class="n">rn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="mf">2.92_rk</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">rn</span>
+<span class="w">      </span><span class="k">else</span>
+<span class="k">         </span><span class="n">rn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.055_rk</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="n">rn</span><span class="w"> </span><span class="o">**</span><span class="w"> </span><span class="p">(</span><span class="mf">1.0_rk</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">2.4_rk</span><span class="p">))</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">0.055_rk</span>
+<span class="w">      </span><span class="k">end if</span>
+
+<span class="k">      if</span><span class="w"> </span><span class="p">(</span><span class="n">gn</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mf">0.0031308_rk</span><span class="p">)</span><span class="w"> </span><span class="k">then</span>
+<span class="k">         </span><span class="n">gn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="mf">2.92_rk</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">gn</span>
+<span class="w">      </span><span class="k">else</span>
+<span class="k">         </span><span class="n">gn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.055_rk</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="n">gn</span><span class="w"> </span><span class="o">**</span><span class="w"> </span><span class="p">(</span><span class="mf">1.0_rk</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">2.4_rk</span><span class="p">))</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">0.055_rk</span>
+<span class="w">      </span><span class="k">end if</span>
+
+<span class="k">      if</span><span class="w"> </span><span class="p">(</span><span class="n">bn</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mf">0.0031308_rk</span><span class="p">)</span><span class="w"> </span><span class="k">then</span>
+<span class="k">         </span><span class="n">bn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="mf">2.92_rk</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">bn</span>
+<span class="w">      </span><span class="k">else</span>
+<span class="k">         </span><span class="n">bn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.055_rk</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="n">bn</span><span class="w"> </span><span class="o">**</span><span class="w"> </span><span class="p">(</span><span class="mf">1.0_rk</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">2.4_rk</span><span class="p">))</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">0.055_rk</span>
+<span class="w">      </span><span class="k">end if</span>
+
+<span class="w">      </span><span class="c">! Scale and convert to integer RGB values</span>
+<span class="w">      </span><span class="n">r</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">nint</span><span class="p">(</span><span class="n">rn</span><span class="o">*</span><span class="mi">25</span><span class="mf">5.0_rk</span><span class="p">,</span><span class="w"> </span><span class="nb">kind</span><span class="o">=</span><span class="n">ik</span><span class="p">)</span>
+<span class="w">      </span><span class="n">g</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">nint</span><span class="p">(</span><span class="n">gn</span><span class="o">*</span><span class="mi">25</span><span class="mf">5.0_rk</span><span class="p">,</span><span class="w"> </span><span class="nb">kind</span><span class="o">=</span><span class="n">ik</span><span class="p">)</span>
+<span class="w">      </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">nint</span><span class="p">(</span><span class="n">bn</span><span class="o">*</span><span class="mi">25</span><span class="mf">5.0_rk</span><span class="p">,</span><span class="w"> </span><span class="nb">kind</span><span class="o">=</span><span class="n">ik</span><span class="p">)</span>
+
+<span class="w">   </span><span class="k">end subroutine </span><span class="n">xyz_to_rgb</span>
+</pre></div>
+
+    </section>
+    <br>
+    
+    </div>
+  </div>
+
+      <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col"><p>ForImage was developed by Seyed Ali Ghasemi<br>&copy; 2023 
+</p>
+          </div>
+          <div class="col">
+            <p class="text-end">
+              Documentation generated by
+              <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+ on 2023-11-24T10:49:13.661791             </p>
+          </div>
+        </div>
+        <br>
+      </div> <!-- /container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
+
+    <!-- MathJax JavaScript
+             ================================================== -->
+             <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+          TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+          jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+          extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+          });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+          <script src="../tipuesearch/tipuesearch_content.js"></script>
+          <script src="../tipuesearch/tipuesearch_set.js"></script>
+          <script src="../tipuesearch/tipuesearch.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="Documentation for ForImage">
+    <meta name="author" content="Seyed Ali Ghasemi" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>forimage_parameters &ndash; ForImage</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+      <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.0.slim.min.js" integrity="sha256-tG5mcZUtJsZvyKAxYLVXrmjKBVLd6VpVccqz/r4ypFE=" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="container-fluid mb-sm-4 mb-xl-2">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">ForImage <small>0.3.0</small></a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+          </button>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="../lists/files.html">Source Files</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/modules.html">Modules</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/procedures.html">Procedures</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/types.html">Derived Types</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/programs.html">Programs</a>
+                </li>
+            </ul>
+              <div class="d-flex align-items-end flex-grow-1">
+                <form action="../search.html" role="search" class="ms-auto">
+                  <input type="text" class="form-control" aria-label="Search" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                </form>
+              </div>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+  <div class="row">
+    <h1>forimage_parameters
+      <small>Module</small>
+      
+    </h1>
+      <div class="container p-2 mb-4 bg-light border rounded-3">
+    <div class="row align-items-center justify-content-between" id="info-bar">
+      <div class="col">
+        <ul class="list-inline" style="margin-bottom:0px;display:inline">
+
+            <li class="list-inline-item" id="statements"><i class="fa fa-list-ol"></i>
+              <a data-bs-toggle="tooltip"
+                 data-bs-placement="bottom" data-html="true"
+                 title=" 0.4% of total for modules and submodules.">7 statements</a>
+            </li>
+
+            <li class="list-inline-item" id="source-file">
+              <i class="fa fa-code"></i>
+              <a href="../src/foimage_parameters.f90"> Source File</a>
+            </li>
+        </ul>
+      </div>
+      <div class="col">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-end mb-0">
+                <li class="breadcrumb-item"><a href='../sourcefile/foimage_parameters.f90.html'>foimage_parameters.f90</a></li>
+            <li class="breadcrumb-item active" aria-current="page">forimage_parameters</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(function () {
+    $('[data-bs-toggle="tooltip"]').tooltip()
+    })
+  </script>
+
+  </div>
+
+  <div class="row">
+    <div class="col-md-3">
+        <div id="sidebar">
+      <h3>Contents</h3>
+  
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#vars-0"
+         aria-expanded="false" aria-controls="vars-0">
+         <h4 class="card-header bg-primary text-white">Variables</h4>
+      </a>
+      <div id="vars-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../module/forimage_parameters.html#variable-pi">pi</a>
+        </div>
+      </div>
+    </div>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+  </div>
+
+    </div>
+
+    <div class="col-md-9" id='text'>
+      
+<br>          <div class="card mb-4">
+      <h3 class="card-header card-title bg-light">Uses</h3>
+      <div class="card-body">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <ul class="list-inline">
+                  <li class="list-inline-item"><a href='http://fortranwiki.org/fortran/show/iso_fortran_env'>iso_fortran_env</a></li>
+              </ul>
+            </li>
+            <li class="list-group-item">
+              <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.43.0 (0)
+ -->
+<!-- Title: module~~forimage_parameters~~UsesGraph Pages: 1 -->
+<svg id="moduleforimage_parametersUsesGraph" width="267pt" height="32pt"
+ viewBox="0.00 0.00 267.00 32.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="module~~forimage_parameters~~UsesGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 28)">
+<title>module~~forimage_parameters~~UsesGraph</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-28 263,-28 263,4 -4,4"/>
+<!-- module~forimage_parameters -->
+<g id="module~~forimage_parameters~~UsesGraph_node1" class="node">
+<title>module~forimage_parameters</title>
+<polygon fill="none" stroke="black" points="259,-24 130,-24 130,0 259,0 259,-24"/>
+<text text-anchor="middle" x="194.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50">forimage_parameters</text>
+</g>
+<!-- iso_fortran_env -->
+<g id="module~~forimage_parameters~~UsesGraph_node2" class="node">
+<title>iso_fortran_env</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="94,-24 0,-24 0,0 94,0 94,-24"/>
+<text text-anchor="middle" x="47" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">iso_fortran_env</text>
+</g>
+<!-- module~forimage_parameters&#45;&gt;iso_fortran_env -->
+<g id="module~~forimage_parameters~~UsesGraph_edge1" class="edge">
+<title>module~forimage_parameters&#45;&gt;iso_fortran_env</title>
+<path fill="none" stroke="#255000" stroke-dasharray="5,2" d="M129.68,-12C121.31,-12 112.77,-12 104.53,-12"/>
+<polygon fill="#255000" stroke="#255000" points="104.28,-8.5 94.28,-12 104.28,-15.5 104.28,-8.5"/>
+</g>
+</g>
+</svg>
+</div>        <div><a type="button" class="graph-help" data-toggle="modal" href="#UsesGraph-help-text">Help</a></div>
+          <div class="modal fade" id="UsesGraph-help-text" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                  <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
+                </div>
+              <div class="modal-body">
+<p>Nodes of different colours represent the following: </p>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.43.0 (0)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="518pt" height="32pt"
+ viewBox="0.00 0.00 517.50 32.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 28)">
+<title>Graph Key</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-28 513.5,-28 513.5,4 -4,4"/>
+<!-- Module -->
+<g id="node1" class="node">
+<title>Module</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="54,-24 0,-24 0,0 54,0 54,-24"/>
+<text text-anchor="middle" x="27" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Module</text>
+</g>
+<!-- Submodule -->
+<g id="node2" class="node">
+<title>Submodule</title>
+<polygon fill="#5bc0de" stroke="#5bc0de" points="145.5,-24 72.5,-24 72.5,0 145.5,0 145.5,-24"/>
+<text text-anchor="middle" x="109" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Submodule</text>
+</g>
+<!-- Subroutine -->
+<g id="node3" class="node">
+<title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="234,-24 164,-24 164,0 234,0 234,-24"/>
+<text text-anchor="middle" x="199" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node4" class="node">
+<title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="310,-24 252,-24 252,0 310,0 310,-24"/>
+<text text-anchor="middle" x="281" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Function</text>
+</g>
+<!-- Program -->
+<g id="node5" class="node">
+<title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="386,-24 328,-24 328,0 386,0 386,-24"/>
+<text text-anchor="middle" x="357" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node6" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="black" points="509.5,-24 404.5,-24 404.5,0 509.5,0 509.5,-24"/>
+<text text-anchor="middle" x="457" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+<p>Solid arrows point from a submodule to the (sub)module which it is
+descended from. Dashed arrows point from a module or program unit to 
+modules which it uses.
+</p>
+ Where possible, edges connecting nodes are
+given different colours to make them easier to distinguish in
+large graphs.</div>
+            </div>
+          </div>
+        </div>
+            </li>
+        </ul>
+      </div>
+    </div>
+
+          <div class="card">
+      <h3 class="card-header card-title bg-light">Used by</h3>
+      <div class="card-body">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.43.0 (0)
+ -->
+<!-- Title: module~~forimage_parameters~~UsedByGraph Pages: 1 -->
+<svg id="moduleforimage_parametersUsedByGraph" width="526pt" height="81pt"
+ viewBox="0.00 0.00 526.00 81.35" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="module~~forimage_parameters~~UsedByGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 77.35)">
+<title>module~~forimage_parameters~~UsedByGraph</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-77.35 522,-77.35 522,4 -4,4"/>
+<!-- module~forimage_parameters -->
+<g id="module~~forimage_parameters~~UsedByGraph_node1" class="node">
+<title>module~forimage_parameters</title>
+<polygon fill="none" stroke="black" points="129,-65 0,-65 0,-41 129,-41 129,-65"/>
+<text text-anchor="middle" x="64.5" y="-50.6" font-family="Helvetica,sans-Serif" font-size="10.50">forimage_parameters</text>
+</g>
+<!-- module~forcolor -->
+<g id="module~~forimage_parameters~~UsedByGraph_node2" class="node">
+<title>module~forcolor</title>
+<g id="a_module~~forimage_parameters~~UsedByGraph_node2"><a xlink:href=".././module/forcolor.html" xlink:title="forcolor">
+<polygon fill="#337ab7" stroke="#337ab7" points="309,-45 255,-45 255,-21 309,-21 309,-45"/>
+<text text-anchor="middle" x="282" y="-30.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">forcolor</text>
+</a>
+</g>
+</g>
+<!-- module~forcolor&#45;&gt;module~forimage_parameters -->
+<g id="module~~forimage_parameters~~UsedByGraph_edge1" class="edge">
+<title>module~forcolor&#45;&gt;module~forimage_parameters</title>
+<path fill="none" stroke="#255000" stroke-dasharray="5,2" d="M264.8,-45.09C247.85,-56.55 220.01,-72.15 193,-73"/>
+<path fill="none" stroke="#255000" stroke-dasharray="5,2" d="M191,-73C168.83,-73.7 144.71,-70.76 123.6,-66.94"/>
+<polygon fill="#255000" stroke="#255000" points="123.98,-63.45 113.5,-65.01 122.66,-70.33 123.98,-63.45"/>
+</g>
+<!-- module~pnm -->
+<g id="module~~forimage_parameters~~UsedByGraph_node4" class="node">
+<title>module~pnm</title>
+<g id="a_module~~forimage_parameters~~UsedByGraph_node4"><a xlink:href=".././module/pnm.html" xlink:title="pnm">
+<polygon fill="#337ab7" stroke="#337ab7" points="219,-45 165,-45 165,-21 219,-21 219,-45"/>
+<text text-anchor="middle" x="192" y="-30.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">pnm</text>
+</a>
+</g>
+</g>
+<!-- module~forcolor&#45;&gt;module~pnm -->
+<g id="module~~forimage_parameters~~UsedByGraph_edge7" class="edge">
+<title>module~forcolor&#45;&gt;module~pnm</title>
+<path fill="none" stroke="#002505" stroke-dasharray="5,2" d="M254.6,-33C246.61,-33 237.69,-33 229.18,-33"/>
+<polygon fill="#002505" stroke="#002505" points="229.08,-29.5 219.08,-33 229.08,-36.5 229.08,-29.5"/>
+</g>
+<!-- module~forimage -->
+<g id="module~~forimage_parameters~~UsedByGraph_node3" class="node">
+<title>module~forimage</title>
+<g id="a_module~~forimage_parameters~~UsedByGraph_node3"><a xlink:href=".././module/forimage.html" xlink:title="forimage">
+<polygon fill="#337ab7" stroke="#337ab7" points="406,-45 345,-45 345,-21 406,-21 406,-45"/>
+<text text-anchor="middle" x="375.5" y="-30.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">forimage</text>
+</a>
+</g>
+</g>
+<!-- module~forimage&#45;&gt;module~forimage_parameters -->
+<g id="module~~forimage_parameters~~UsedByGraph_edge2" class="edge">
+<title>module~forimage&#45;&gt;module~forimage_parameters</title>
+<path fill="none" stroke="#255000" stroke-dasharray="5,2" d="M344.76,-43.56C333.65,-47.24 320.84,-51.15 309,-54 258.21,-66.23 245.22,-71.35 193,-73"/>
+</g>
+<!-- module~forimage&#45;&gt;module~forcolor -->
+<g id="module~~forimage_parameters~~UsedByGraph_edge4" class="edge">
+<title>module~forimage&#45;&gt;module~forcolor</title>
+<path fill="none" stroke="#255000" stroke-dasharray="5,2" d="M344.79,-33C336.63,-33 327.69,-33 319.21,-33"/>
+<polygon fill="#255000" stroke="#255000" points="319.17,-29.5 309.17,-33 319.17,-36.5 319.17,-29.5"/>
+</g>
+<!-- module~forimage&#45;&gt;module~pnm -->
+<g id="module~~forimage_parameters~~UsedByGraph_edge8" class="edge">
+<title>module~forimage&#45;&gt;module~pnm</title>
+<path fill="none" stroke="#002505" stroke-dasharray="5,2" d="M344.97,-21.39C333.88,-17.6 321.03,-13.88 309,-12 285.29,-8.29 278.68,-8.1 255,-12 246.3,-13.43 237.17,-15.93 228.68,-18.71"/>
+<polygon fill="#002505" stroke="#002505" points="227.36,-15.46 219.06,-22.06 229.66,-22.07 227.36,-15.46"/>
+</g>
+<!-- module~pnm&#45;&gt;module~forimage_parameters -->
+<g id="module~~forimage_parameters~~UsedByGraph_edge3" class="edge">
+<title>module~pnm&#45;&gt;module~forimage_parameters</title>
+<path fill="none" stroke="#255000" stroke-dasharray="5,2" d="M165,-37.14C157.25,-38.38 148.34,-39.8 139.11,-41.27"/>
+<polygon fill="#255000" stroke="#255000" points="138.33,-37.85 129.01,-42.88 139.44,-44.76 138.33,-37.85"/>
+</g>
+<!-- program~demo_color -->
+<g id="module~~forimage_parameters~~UsedByGraph_node5" class="node">
+<title>program~demo_color</title>
+<g id="a_module~~forimage_parameters~~UsedByGraph_node5"><a xlink:href=".././program/demo_color.html" xlink:title="demo_color">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="518,-66 442,-66 442,-42 518,-42 518,-66"/>
+<text text-anchor="middle" x="480" y="-51.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">demo_color</text>
+</a>
+</g>
+</g>
+<!-- program~demo_color&#45;&gt;module~forimage -->
+<g id="module~~forimage_parameters~~UsedByGraph_edge5" class="edge">
+<title>program~demo_color&#45;&gt;module~forimage</title>
+<path fill="none" stroke="#025500" stroke-dasharray="5,2" d="M442,-46.42C433.5,-44.68 424.45,-42.82 415.86,-41.06"/>
+<polygon fill="#025500" stroke="#025500" points="416.56,-37.63 406.06,-39.06 415.16,-44.49 416.56,-37.63"/>
+</g>
+<!-- program~demo_ppm -->
+<g id="module~~forimage_parameters~~UsedByGraph_node6" class="node">
+<title>program~demo_ppm</title>
+<g id="a_module~~forimage_parameters~~UsedByGraph_node6"><a xlink:href=".././program/demo_ppm.html" xlink:title="demo_ppm">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="516.5,-24 443.5,-24 443.5,0 516.5,0 516.5,-24"/>
+<text text-anchor="middle" x="480" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">demo_ppm</text>
+</a>
+</g>
+</g>
+<!-- program~demo_ppm&#45;&gt;module~forimage -->
+<g id="module~~forimage_parameters~~UsedByGraph_edge6" class="edge">
+<title>program~demo_ppm&#45;&gt;module~forimage</title>
+<path fill="none" stroke="#025500" stroke-dasharray="5,2" d="M443.44,-19.29C434.62,-21.09 425.11,-23.04 416.1,-24.89"/>
+<polygon fill="#025500" stroke="#025500" points="415.31,-21.48 406.22,-26.91 416.72,-28.33 415.31,-21.48"/>
+</g>
+</g>
+</svg>
+</div>        <div><a type="button" class="graph-help" data-toggle="modal" href="#UsedByGraph-help-text">Help</a></div>
+          <div class="modal fade" id="UsedByGraph-help-text" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                  <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
+                </div>
+              <div class="modal-body">
+<p>Nodes of different colours represent the following: </p>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.43.0 (0)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="518pt" height="32pt"
+ viewBox="0.00 0.00 517.50 32.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 28)">
+<title>Graph Key</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-28 513.5,-28 513.5,4 -4,4"/>
+<!-- Module -->
+<g id="node1" class="node">
+<title>Module</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="54,-24 0,-24 0,0 54,0 54,-24"/>
+<text text-anchor="middle" x="27" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Module</text>
+</g>
+<!-- Submodule -->
+<g id="node2" class="node">
+<title>Submodule</title>
+<polygon fill="#5bc0de" stroke="#5bc0de" points="145.5,-24 72.5,-24 72.5,0 145.5,0 145.5,-24"/>
+<text text-anchor="middle" x="109" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Submodule</text>
+</g>
+<!-- Subroutine -->
+<g id="node3" class="node">
+<title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="234,-24 164,-24 164,0 234,0 234,-24"/>
+<text text-anchor="middle" x="199" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node4" class="node">
+<title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="310,-24 252,-24 252,0 310,0 310,-24"/>
+<text text-anchor="middle" x="281" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Function</text>
+</g>
+<!-- Program -->
+<g id="node5" class="node">
+<title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="386,-24 328,-24 328,0 386,0 386,-24"/>
+<text text-anchor="middle" x="357" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node6" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="black" points="509.5,-24 404.5,-24 404.5,0 509.5,0 509.5,-24"/>
+<text text-anchor="middle" x="457" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+<p>Solid arrows point from a submodule to the (sub)module which it is
+descended from. Dashed arrows point from a module or program unit to 
+modules which it uses.
+</p>
+ Where possible, edges connecting nodes are
+given different colours to make them easier to distinguish in
+large graphs.</div>
+            </div>
+          </div>
+        </div>
+            </li>
+        </ul>
+      </div>
+    </div>
+
+      <br>
+
+
+        <section>
+          <h2>Variables</h2>
+            <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Visibility</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+<th></th><th scope="col">Initial</th>        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-pi"></span>
+              real(kind=rk),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>pi</strong></td>
+<td> =</td>
+                <td>4.0_rk*atan(1.0_rk)</td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+        </section>
+        <br>
+
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+
+      <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col"><p>ForImage was developed by Seyed Ali Ghasemi<br>&copy; 2023 
+</p>
+          </div>
+          <div class="col">
+            <p class="text-end">
+              Documentation generated by
+              <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+ on 2023-11-24T10:49:13.661791             </p>
+          </div>
+        </div>
+        <br>
+      </div> <!-- /container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
+
+    <!-- MathJax JavaScript
+             ================================================== -->
+             <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+          TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+          jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+          extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+          });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+          <script src="../tipuesearch/tipuesearch_content.js"></script>
+          <script src="../tipuesearch/tipuesearch_set.js"></script>
+          <script src="../tipuesearch/tipuesearch.js"></script>
+
+  </body>
+</html>

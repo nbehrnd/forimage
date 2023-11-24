@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="Documentation for ForImage">
+    <meta name="author" content="Seyed Ali Ghasemi" >
+    <link rel="icon" href="./favicon.png">
+
+    <title> ForImage </title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="./css/pygments.css" rel="stylesheet">
+    <link href="./css/font-awesome.min.css" rel="stylesheet">
+    <link href="./css/local.css" rel="stylesheet">
+      <link  href="./tipuesearch/tipuesearch.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.0.slim.min.js" integrity="sha256-tG5mcZUtJsZvyKAxYLVXrmjKBVLd6VpVccqz/r4ypFE=" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="container-fluid mb-sm-4 mb-xl-2">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="./index.html">ForImage <small>0.3.0</small></a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+          </button>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="./lists/files.html">Source Files</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./lists/modules.html">Modules</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./lists/procedures.html">Procedures</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./lists/types.html">Derived Types</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./lists/programs.html">Programs</a>
+                </li>
+            </ul>
+              <div class="d-flex align-items-end flex-grow-1">
+                <form action="./search.html" role="search" class="ms-auto">
+                  <input type="text" class="form-control" aria-label="Search" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                </form>
+              </div>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="p-5 mb-4 bg-light border rounded-3" id="jumbotron">
+        
+	<p> Find us on&hellip;</p>
+        <p>
+          <a class="btn btn-lg btn-primary" href="https://github.com/gha3mi/forimage" role="button">GitHub</a>
+        </p>
+      </div>
+
+      <div class="row" id='text'>
+        <div class=col-md-8>
+          <h1>ForImage</h1>
+          <p><a href="https://github.com/gha3mi/forimage"><img alt="GitHub" src="https://img.shields.io/badge/GitHub-ForImage-blue.svg?style=social&amp;logo=github"></a>
+<a href="https://github.com/gha3mi/forimage/releases/latest"><img alt="Version" src="https://img.shields.io/github/release/gha3mi/forimage.svg"></a>
+<a href="https://gha3mi.github.io/forimage/"><img alt="Documentation" src="https://img.shields.io/badge/ford-Documentation%20-blueviolet.svg"></a>
+<a href="https://github.com/gha3mi/forimage/actions/workflows/CI_test.yml"><img alt="CI_test" src="https://github.com/gha3mi/forimage/actions/workflows/CI_test.yml/badge.svg"></a>
+<a href="https://github.com/gha3mi/forimage/actions/workflows/CI_doc.yml"><img alt="CI_doc" src="https://github.com/gha3mi/forimage/actions/workflows/CI_doc.yml/badge.svg"></a> 
+<a href="https://github.com/gha3mi/forimage/blob/main/LICENSE"><img alt="License" src="https://img.shields.io/github/license/gha3mi/forimage?color=green"></a></p>
+<p><img alt="ForImage" src="https://github.com/gha3mi/forimage/raw/main/media/logo.png" width="750"></p>
+<p><strong>ForImage</strong>: A Fortran library for processing and editing PNM images and managing colors.</p>
+<p>A Fortran library for working with image files (PNM format) and managing colors effectively.</p>
+<ul>
+<li><a href="#pnm-file-support">PNM File Support</a></li>
+<li><a href="#fpm-dependency">fpm dependency</a></li>
+<li><a href="#how-to-run-examples">How to run examples</a></li>
+<li><a href="#api-documentation">API documentation</a></li>
+<li><a href="#contributing">Contributing</a></li>
+</ul>
+<h2>PNM File Support</h2>
+<p>ForImage offers comprehensive support for PNM files, including creation, importing, and exporting capabilities. It seamlessly handles formats such as <code>PBM</code>, <code>PGM</code>, and <code>PPM</code> in both <code>ASCII</code> and <code>binary</code> representations. </p>
+<p>Available features include:</p>
+<ul>
+<li>Original</li>
+</ul>
+<p><img alt="demo" src="https://github.com/gha3mi/forimage/raw/main/png_files/mandelbrot_binary.png" width="400"> </p>
+<ul>
+<li>Negative</li>
+</ul>
+<p><img alt="demo" src="https://github.com/gha3mi/forimage/raw/main/png_files/mandelbrot_binary_negative.png" width="400"></p>
+<ul>
+<li>Brighten</li>
+</ul>
+<p><img alt="demo" src="https://github.com/gha3mi/forimage/raw/main/png_files/mandelbrot_binary_brighten.png" width="400"></p>
+<ul>
+<li>Swap Channels</li>
+</ul>
+<p><img alt="demo" src="https://github.com/gha3mi/forimage/raw/main/png_files/mandelbrot_binary_swap.png" width="400"></p>
+<ul>
+<li>Remove Channels</li>
+</ul>
+<p><img alt="demo" src="https://github.com/gha3mi/forimage/raw/main/png_files/mandelbrot_binary_remove.png" width="400"></p>
+<ul>
+<li>Greyscale</li>
+</ul>
+<p><img alt="demo" src="https://github.com/gha3mi/forimage/raw/main/png_files/mandelbrot_binary_greyscale.png" width="400"></p>
+<ul>
+<li>Rotate</li>
+</ul>
+<p><img alt="demo" src="https://github.com/gha3mi/forimage/raw/main/png_files/mandelbrot_binary_rotate.png" width="400"></p>
+<ul>
+<li>Flip Horizontal</li>
+</ul>
+<p><img alt="demo" src="https://github.com/gha3mi/forimage/raw/main/png_files/mandelbrot_binary_flip_horizontal.png" width="400"></p>
+<ul>
+<li>Flip Vertical</li>
+</ul>
+<p><img alt="demo" src="https://github.com/gha3mi/forimage/raw/main/png_files/mandelbrot_binary_flip_vertical.png" width="400"></p>
+<ul>
+<li>Crop</li>
+</ul>
+<p><img alt="demo" src="https://github.com/gha3mi/forimage/raw/main/png_files/mandelbrot_binary_crop.png" width="250"></p>
+<ul>
+<li>Resize</li>
+</ul>
+<p><img alt="demo" src="https://github.com/gha3mi/forimage/raw/main/png_files/mandelbrot_binary_resize.png" width="250"></p>
+<h2>Color Support</h2>
+<p>ForImage supports different color representations like RGB, CMYK, Decimal, Hexadecimal, HSV, HSL, XYZ, and color names. Users can easily set and retrieve color values, switch between color types, and find the closest matching colors.</p>
+<p><img alt="demo" src="https://github.com/gha3mi/forimage/raw/main/png_files/black.png" width="50"><img alt="demo" src="https://github.com/gha3mi/forimage/raw/main/png_files/white.png" width="50"><img alt="demo" src="https://github.com/gha3mi/forimage/raw/main/png_files/blue.png" width="50"><img alt="demo" src="https://github.com/gha3mi/forimage/raw/main/png_files/red.png" width="50"><img alt="demo" src="https://github.com/gha3mi/forimage/raw/main/png_files/yellow.png" width="50"><img alt="demo" src="https://github.com/gha3mi/forimage/raw/main/png_files/gray.png" width="50"><img alt="demo" src="https://github.com/gha3mi/forimage/raw/main/png_files/cyan.png" width="50"><img alt="demo" src="https://github.com/gha3mi/forimage/raw/main/png_files/orange.png" width="50"><img alt="demo" src="https://github.com/gha3mi/forimage/raw/main/png_files/pink.png" width="50"><img alt="demo" src="https://github.com/gha3mi/forimage/raw/main/png_files/gold.png" width="50"><img alt="demo" src="https://github.com/gha3mi/forimage/raw/main/png_files/violet.png" width="50"><img alt="demo" src="https://github.com/gha3mi/forimage/raw/main/png_files/green.png" width="50"><img alt="demo" src="https://github.com/gha3mi/forimage/raw/main/png_files/brown.png" width="50"><img alt="demo" src="https://github.com/gha3mi/forimage/raw/main/png_files/magenta.png" width="50"></p>
+<h2>fpm dependency</h2>
+<p>If you want to use <code>ForImage</code> as a dependency in your own fpm project,
+you can easily include it by adding the following line to your <code>fpm.toml</code> file:</p>
+<div class="codehilite"><pre><span></span><code><span class="k">[dependencies]</span>
+<span class="n">forimage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="n">git</span><span class="p">=</span><span class="s2">&quot;https://github.com/gha3mi/forimage.git&quot;</span><span class="p">}</span>
+</code></pre></div>
+
+<h2>How to run demos</h2>
+<p><strong>Clone the repository:</strong></p>
+<p>Clone the <code>ForImage</code> repository from GitHub using the following command:</p>
+<div class="codehilite"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/gha3mi/forimage.git
+</code></pre></div>
+
+<p>Navigate to the cloned directory:</p>
+<div class="codehilite"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>forimage
+</code></pre></div>
+
+<h3>Running <code>demo_ppm</code></h3>
+<p>The <code>demo_ppm</code> program demonstrates various operations on PPM (Portable Pixmap) images. It generates Mandelbrot fractals, performs diverse manipulations, and exports images in the PPM format.</p>
+<p>To run <code>demo_ppm</code>, execute the following command:</p>
+<div class="codehilite"><pre><span></span><code>fpm<span class="w"> </span>run<span class="w"> </span>--example<span class="w"> </span>demo_ppm
+</code></pre></div>
+
+<h3>Running <code>demo_color</code></h3>
+<p>The <code>demo_color</code> program showcases manipulation of color spaces and their conversions. This program sets a custom color using various methods, converts it to different color spaces, retrieves color values, finds the nearest color, and prints color details.</p>
+<p>To run <code>demo_color</code>, execute the following command:</p>
+<div class="codehilite"><pre><span></span><code>fpm<span class="w"> </span>run<span class="w"> </span>--example<span class="w"> </span>demo_color
+</code></pre></div>
+
+<!-- To run the examples using `fpm`, you can use response files for specific
+compilers:
+
+**For Intel Fortran Compiler (ifort):**
+
+  ```shell
+  fpm @ifort
+  ```
+
+**For Intel Fortran Compiler (ifx):**
+
+  ```shell
+  fpm @ifx
+  ```
+
+**For NVIDIA Compiler (nvfortran):**
+
+  ```shell
+  fpm @nvfortran
+  ```
+
+**For GNU Fortran Compiler (gfortran):**
+
+  ```shell
+  fpm @gfortran
+  ``` -->
+
+<h2>API documentation</h2>
+<p>The most up-to-date API documentation for the master branch is available
+<a href="https://gha3mi.github.io/forimage/">here</a>.
+To generate the API documentation for <code>ForImage</code> using
+<a href="https://github.com/Fortran-FOSS-Programmers/ford">ford</a> run the following
+command:</p>
+<div class="codehilite"><pre><span></span><code>ford<span class="w"> </span>ford.yml
+</code></pre></div>
+
+<h2>Contributing</h2>
+<p>Contributions to <code>ForImage</code> are welcome!
+If you find any issues or would like to suggest improvements, please open an issue.</p>
+        </div>
+          <div class="col-md-4">
+	        <div class="card card-body bg-light">
+              <h2 class="card-title">Developer Info</h2>
+              <h4 class="card-text">Seyed Ali Ghasemi</h4>
+              <p class="card-text"></p>
+                <div class="text-center"><div class="btn-group" role="group">
+                      <a class="btn btn-lg btn-primary" href="mailto:info@gha3mi.com"><i class="fa fa-envelope fa-lg"></i></a>
+                      <a class="btn btn-lg btn-primary" href="https://github.com/gha3mi"><i class="fa fa-github fa-lg"></i></a>
+                </div></div>
+            </div>
+          </div>
+      </div>
+        <div class="row">
+          <hr>
+          <div class="col-xs-6 col-sm-3">
+            <div>
+              <h3>Source Files</h3>
+              <ul><li><a href='./sourcefile/demo_color.f90.html'>demo_color.f90</a></li><li><a href='./sourcefile/demo_ppm.f90.html'>demo_ppm.f90</a></li><li><a href='./sourcefile/foimage_parameters.f90.html'>foimage_parameters.f90</a></li><li><a href='./sourcefile/forcolor.f90.html'>forcolor.f90</a></li><li><a href='./sourcefile/forimage.f90.html'>forimage.f90</a></li><li><a href='./sourcefile/lut.f90.html'>lut.f90</a></li><li><a href='./sourcefile/pnm.f90.html'>pnm.f90</a></li></ul>
+            </div>
+            <div>
+              <ul>
+                <li><a href="./lists/files.html"><em>All source files&hellip;</em></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-xs-6 col-sm-3">
+            <div>
+              <h3>Modules</h3>
+              <ul><li><a href='./module/forcolor.html'>forcolor</a></li><li><a href='./module/forimage.html'>forimage</a></li><li><a href='./module/forimage_parameters.html'>forimage_parameters</a></li><li><a href='./module/lut.html'>lut</a></li><li><a href='./module/pnm.html'>pnm</a></li></ul>
+            </div>
+            <div>
+              <ul>
+                <li><a href="./lists/modules.html"><em>All modules&hellip;</em></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-xs-6 col-sm-3">
+            <div>
+              <h3>Procedures</h3>
+              <ul><li><a href='./proc/allocate_colors.html'>allocate_colors</a></li><li><a href='./proc/allocate_pixels.html'>allocate_pixels</a></li><li><a href='./proc/aspect_ratio.html'>aspect_ratio</a></li><li><a href='./proc/average_colors.html'>average_colors</a></li><li><a href='./proc/brighten.html'>brighten</a></li><li><a href='./proc/check_pixel_range.html'>check_pixel_range</a></li><li><a href='./proc/cmyk_to_rgb.html'>cmyk_to_rgb</a></li><li><a href='./proc/convert.html'>convert</a></li><li><a href='./proc/copy_color.html'>copy_color</a></li><li><a href='./proc/crop.html'>crop</a></li></ul>
+            </div>
+            <div>
+              <ul>
+                <li><a href="./lists/procedures.html"><em>All procedures&hellip;</em></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-xs-6 col-sm-3">
+            <div>
+              <h3>Derived Types</h3>
+              <ul><li><a href='./type/color.html'>color</a></li><li><a href='./type/format_lut.html'>format_lut</a></li><li><a href='./type/format_pnm.html'>format_pnm</a></li></ul>
+            </div>
+            <div>
+              <ul>
+                <li><a href="./lists/types.html"><em>All derived types&hellip;</em></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col"><p>ForImage was developed by Seyed Ali Ghasemi<br>&copy; 2023 
+</p>
+          </div>
+          <div class="col">
+            <p class="text-end">
+              Documentation generated by
+              <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+ on 2023-11-24T10:49:13.661791             </p>
+          </div>
+        </div>
+        <br>
+      </div> <!-- /container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
+
+    <!-- MathJax JavaScript
+             ================================================== -->
+             <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+          TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+          jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+          extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+          });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+          <script src="./tipuesearch/tipuesearch_content.js"></script>
+          <script src="./tipuesearch/tipuesearch_set.js"></script>
+          <script src="./tipuesearch/tipuesearch.js"></script>
+
+  </body>
+</html>

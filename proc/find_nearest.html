@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="Documentation for ForImage">
+    <meta name="author" content="Seyed Ali Ghasemi" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>find_nearest &ndash; ForImage</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+      <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.0.slim.min.js" integrity="sha256-tG5mcZUtJsZvyKAxYLVXrmjKBVLd6VpVccqz/r4ypFE=" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="container-fluid mb-sm-4 mb-xl-2">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">ForImage <small>0.3.0</small></a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+          </button>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="../lists/files.html">Source Files</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/modules.html">Modules</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/procedures.html">Procedures</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/types.html">Derived Types</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/programs.html">Programs</a>
+                </li>
+            </ul>
+              <div class="d-flex align-items-end flex-grow-1">
+                <form action="../search.html" role="search" class="ms-auto">
+                  <input type="text" class="form-control" aria-label="Search" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                </form>
+              </div>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+  <div class="row">
+    <h1>find_nearest
+      <small>Subroutine</small>
+      
+    </h1>
+      <div class="container p-2 mb-4 bg-light border rounded-3">
+    <div class="row align-items-center justify-content-between" id="info-bar">
+      <div class="col">
+        <ul class="list-inline" style="margin-bottom:0px;display:inline">
+            <li class="list-inline-item" id="meta-author"><i class="fa fa-pencil"></i> Seyed Ali Ghasemi</li>
+
+            <li class="list-inline-item" id="statements"><i class="fa fa-list-ol"></i>
+              <a data-bs-toggle="tooltip"
+                 data-bs-placement="bottom" data-html="true"
+                 title=" 1.5% of total for procedures.">23 statements</a>
+            </li>
+
+            <li class="list-inline-item" id="source-file">
+              <i class="fa fa-code"></i>
+              <a href="../src/forcolor.f90"> Source File</a>
+            </li>
+        </ul>
+      </div>
+      <div class="col">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-end mb-0">
+                <li class="breadcrumb-item"><a href='../sourcefile/forcolor.f90.html'>forcolor.f90</a></li>
+                <li class="breadcrumb-item"><a href='../module/forcolor.html'>forcolor</a></li>
+            <li class="breadcrumb-item active" aria-current="page">find_nearest</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(function () {
+    $('[data-bs-toggle="tooltip"]').tooltip()
+    })
+  </script>
+
+  </div>
+  
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+      <div id="sidebar">
+      <h3>Contents</h3>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    <div class="card card-primary">
+      <div class="card-header text-left"><h3 class="card-title">Source Code</h3></div>
+      <div class="list-group">
+        <a class="list-group-item" href="../proc/find_nearest.html#src">find_nearest</a>
+      </div>
+    </div>
+
+
+  </div>
+
+    </div>
+    
+    <div class="col-md-9" id='text'>
+    <h2>private pure elemental subroutine find_nearest(this, nearest_color)  
+</h2>
+    
+
+
+    <h3>Type Bound</h3>
+    <p><a href='../type/color.html'>color</a></p>
+
+    <h3>Arguments</h3>
+        <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-this~57"></span>
+              class(<a href='../type/color.html'>color</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>this</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-nearest_color"></span>
+              type(<a href='../type/color.html'>color</a>),
+            </td>
+<td>intent(out)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>nearest_color</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <br>
+    <div class="card">
+      <div class="card-header">
+  <h3 class="card-title">Calls</h3>
+      </div>
+      <div class="card-body">
+  <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.43.0 (0)
+ -->
+<!-- Title: proc~~find_nearest~~CallsGraph Pages: 1 -->
+<svg id="procfind_nearestCallsGraph" width="641pt" height="767pt"
+ viewBox="0.00 0.00 641.00 766.74" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="proc~~find_nearest~~CallsGraph" class="graph" transform="scale(1.14 1.14) rotate(0) translate(4 868)">
+<title>proc~~find_nearest~~CallsGraph</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-868 725,-868 725,4 -4,4"/>
+<!-- proc~find_nearest -->
+<g id="proc~~find_nearest~~CallsGraph_node1" class="node">
+<title>proc~find_nearest</title>
+<polygon fill="none" stroke="black" points="163,-381 0,-381 0,-357 163,-357 163,-381"/>
+<text text-anchor="middle" x="81.5" y="-366.6" font-family="Helvetica,sans-Serif" font-size="10.50">forcolor::color%find_nearest</text>
+</g>
+<!-- proc~get_rgb -->
+<g id="proc~~find_nearest~~CallsGraph_node2" class="node">
+<title>proc~get_rgb</title>
+<g id="a_proc~~find_nearest~~CallsGraph_node2"><a xlink:href=".././proc/get_rgb.html" xlink:title="forcolor::color%get_rgb">
+<polygon fill="#d9534f" stroke="#d9534f" points="340,-402 201,-402 201,-378 340,-378 340,-402"/>
+<text text-anchor="middle" x="270.5" y="-387.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">forcolor::color%get_rgb</text>
+</a>
+</g>
+</g>
+<!-- proc~find_nearest&#45;&gt;proc~get_rgb -->
+<g id="proc~~find_nearest~~CallsGraph_edge1" class="edge">
+<title>proc~find_nearest&#45;&gt;proc~get_rgb</title>
+<path fill="none" stroke="#255000" d="M163.16,-378.06C172.28,-379.08 181.57,-380.13 190.67,-381.15"/>
+<polygon fill="#255000" stroke="#255000" points="190.51,-384.65 200.84,-382.29 191.29,-377.7 190.51,-384.65"/>
+</g>
+<!-- proc~initialize_colors -->
+<g id="proc~~find_nearest~~CallsGraph_node3" class="node">
+<title>proc~initialize_colors</title>
+<g id="a_proc~~find_nearest~~CallsGraph_node3"><a xlink:href=".././proc/initialize_colors.html" xlink:title="forcolor::initialize_colors">
+<polygon fill="#d9534f" stroke="#d9534f" points="342,-360 199,-360 199,-336 342,-336 342,-360"/>
+<text text-anchor="middle" x="270.5" y="-345.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">forcolor::initialize_colors</text>
+</a>
+</g>
+</g>
+<!-- proc~find_nearest&#45;&gt;proc~initialize_colors -->
+<g id="proc~~find_nearest~~CallsGraph_edge2" class="edge">
+<title>proc~find_nearest&#45;&gt;proc~initialize_colors</title>
+<path fill="none" stroke="#255000" d="M163.16,-359.94C171.59,-358.99 180.17,-358.03 188.61,-357.08"/>
+<polygon fill="#255000" stroke="#255000" points="189.26,-360.53 198.81,-355.94 188.48,-353.58 189.26,-360.53"/>
+</g>
+<!-- proc~convert -->
+<g id="proc~~find_nearest~~CallsGraph_node4" class="node">
+<title>proc~convert</title>
+<g id="a_proc~~find_nearest~~CallsGraph_node4"><a xlink:href=".././proc/convert.html" xlink:title="forcolor::color%convert">
+<polygon fill="#d9534f" stroke="#d9534f" points="517,-612 378,-612 378,-588 517,-588 517,-612"/>
+<text text-anchor="middle" x="447.5" y="-597.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">forcolor::color%convert</text>
+</a>
+</g>
+</g>
+<!-- proc~initialize_colors&#45;&gt;proc~convert -->
+<g id="proc~~find_nearest~~CallsGraph_edge3" class="edge">
+<title>proc~initialize_colors&#45;&gt;proc~convert</title>
+<path fill="none" stroke="#025525" stroke-opacity="0.019608" d="M328.46,-360.09C333.35,-362.54 337.96,-365.47 342,-369 407.25,-425.96 433.93,-531.84 442.79,-577.78"/>
+<polygon fill="#025525" fill-opacity="0.019608" stroke="#025525" stroke-opacity="0.019608" points="439.39,-578.65 444.62,-587.86 446.27,-577.39 439.39,-578.65"/>
+</g>
+<!-- proc~set -->
+<g id="proc~~find_nearest~~CallsGraph_node5" class="node">
+<title>proc~set</title>
+<g id="a_proc~~find_nearest~~CallsGraph_node5"><a xlink:href=".././proc/set.html" xlink:title="forcolor::color%set">
+<polygon fill="#d9534f" stroke="#d9534f" points="504.5,-213 390.5,-213 390.5,-189 504.5,-189 504.5,-213"/>
+<text text-anchor="middle" x="447.5" y="-198.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">forcolor::color%set</text>
+</a>
+</g>
+</g>
+<!-- proc~initialize_colors&#45;&gt;proc~set -->
+<g id="proc~~find_nearest~~CallsGraph_edge4" class="edge">
+<title>proc~initialize_colors&#45;&gt;proc~set</title>
+<path fill="none" stroke="#025525" stroke-opacity="0.019608" d="M285.82,-335.97C316.2,-310.45 387.31,-250.72 423.89,-219.99"/>
+<polygon fill="#025525" fill-opacity="0.019608" stroke="#025525" stroke-opacity="0.019608" points="426.58,-222.31 431.98,-213.2 422.07,-216.95 426.58,-222.31"/>
+</g>
+<!-- proc~cmyk_to_rgb -->
+<g id="proc~~find_nearest~~CallsGraph_node6" class="node">
+<title>proc~cmyk_to_rgb</title>
+<g id="a_proc~~find_nearest~~CallsGraph_node6"><a xlink:href=".././proc/cmyk_to_rgb.html" xlink:title="forcolor::cmyk_to_rgb">
+<polygon fill="#d9534f" stroke="#d9534f" points="701.5,-864 572.5,-864 572.5,-840 701.5,-840 701.5,-864"/>
+<text text-anchor="middle" x="637" y="-849.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">forcolor::cmyk_to_rgb</text>
+</a>
+</g>
+</g>
+<!-- proc~convert&#45;&gt;proc~cmyk_to_rgb -->
+<g id="proc~~find_nearest~~CallsGraph_edge5" class="edge">
+<title>proc~convert&#45;&gt;proc~cmyk_to_rgb</title>
+<path fill="none" stroke="#255000" d="M450.27,-612.27C456.5,-650.87 481.1,-770.82 553,-831 556.12,-833.61 559.51,-835.9 563.1,-837.91"/>
+<polygon fill="#255000" stroke="#255000" points="561.8,-841.17 572.33,-842.36 564.84,-834.87 561.8,-841.17"/>
+</g>
+<!-- proc~decimal_to_rgb -->
+<g id="proc~~find_nearest~~CallsGraph_node7" class="node">
+<title>proc~decimal_to_rgb</title>
+<g id="a_proc~~find_nearest~~CallsGraph_node7"><a xlink:href=".././proc/decimal_to_rgb.html" xlink:title="forcolor::decimal_to_rgb">
+<polygon fill="#d9534f" stroke="#d9534f" points="708.5,-822 565.5,-822 565.5,-798 708.5,-798 708.5,-822"/>
+<text text-anchor="middle" x="637" y="-807.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">forcolor::decimal_to_rgb</text>
+</a>
+</g>
+</g>
+<!-- proc~convert&#45;&gt;proc~decimal_to_rgb -->
+<g id="proc~~find_nearest~~CallsGraph_edge6" class="edge">
+<title>proc~convert&#45;&gt;proc~decimal_to_rgb</title>
+<path fill="none" stroke="#255000" d="M451.63,-612.42C460.85,-646.37 491.24,-741.38 553,-789 554.87,-790.44 556.82,-791.78 558.84,-793.03"/>
+<polygon fill="#255000" stroke="#255000" points="557.62,-796.34 568.09,-797.94 560.9,-790.16 557.62,-796.34"/>
+</g>
+<!-- proc~hex_to_rgb -->
+<g id="proc~~find_nearest~~CallsGraph_node8" class="node">
+<title>proc~hex_to_rgb</title>
+<g id="a_proc~~find_nearest~~CallsGraph_node8"><a xlink:href=".././proc/hex_to_rgb.html" xlink:title="forcolor::hex_to_rgb">
+<polygon fill="#d9534f" stroke="#d9534f" points="696.5,-780 577.5,-780 577.5,-756 696.5,-756 696.5,-780"/>
+<text text-anchor="middle" x="637" y="-765.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">forcolor::hex_to_rgb</text>
+</a>
+</g>
+</g>
+<!-- proc~convert&#45;&gt;proc~hex_to_rgb -->
+<g id="proc~~find_nearest~~CallsGraph_edge7" class="edge">
+<title>proc~convert&#45;&gt;proc~hex_to_rgb</title>
+<path fill="none" stroke="#255000" d="M453.52,-612.09C465.92,-640.4 500.81,-711.27 553,-747 557.6,-750.15 562.63,-752.83 567.87,-755.1"/>
+<polygon fill="#255000" stroke="#255000" points="566.89,-758.47 577.48,-758.78 569.39,-751.94 566.89,-758.47"/>
+</g>
+<!-- proc~hsl_to_rgb -->
+<g id="proc~~find_nearest~~CallsGraph_node9" class="node">
+<title>proc~hsl_to_rgb</title>
+<g id="a_proc~~find_nearest~~CallsGraph_node9"><a xlink:href=".././proc/hsl_to_rgb.html" xlink:title="forcolor::hsl_to_rgb">
+<polygon fill="#d9534f" stroke="#d9534f" points="694.5,-738 579.5,-738 579.5,-714 694.5,-714 694.5,-738"/>
+<text text-anchor="middle" x="637" y="-723.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">forcolor::hsl_to_rgb</text>
+</a>
+</g>
+</g>
+<!-- proc~convert&#45;&gt;proc~hsl_to_rgb -->
+<g id="proc~~find_nearest~~CallsGraph_edge8" class="edge">
+<title>proc~convert&#45;&gt;proc~hsl_to_rgb</title>
+<path fill="none" stroke="#255000" d="M457.03,-612.17C473.15,-634.2 510.32,-680.69 553,-705 558.21,-707.97 563.84,-710.52 569.63,-712.72"/>
+<polygon fill="#255000" stroke="#255000" points="568.89,-716.16 579.48,-716.09 571.15,-709.54 568.89,-716.16"/>
+</g>
+<!-- proc~hsv_to_rgb -->
+<g id="proc~~find_nearest~~CallsGraph_node10" class="node">
+<title>proc~hsv_to_rgb</title>
+<g id="a_proc~~find_nearest~~CallsGraph_node10"><a xlink:href=".././proc/hsv_to_rgb.html" xlink:title="forcolor::hsv_to_rgb">
+<polygon fill="#d9534f" stroke="#d9534f" points="696,-696 578,-696 578,-672 696,-672 696,-696"/>
+<text text-anchor="middle" x="637" y="-681.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">forcolor::hsv_to_rgb</text>
+</a>
+</g>
+</g>
+<!-- proc~convert&#45;&gt;proc~hsv_to_rgb -->
+<g id="proc~~find_nearest~~CallsGraph_edge9" class="edge">
+<title>proc~convert&#45;&gt;proc~hsv_to_rgb</title>
+<path fill="none" stroke="#255000" d="M465.06,-612.11C485,-626.18 519.96,-649.22 553,-663 558.14,-665.15 563.56,-667.11 569.06,-668.91"/>
+<polygon fill="#255000" stroke="#255000" points="568.43,-672.38 579.02,-671.96 570.48,-665.68 568.43,-672.38"/>
+</g>
+<!-- proc~rgb_to_cmyk -->
+<g id="proc~~find_nearest~~CallsGraph_node11" class="node">
+<title>proc~rgb_to_cmyk</title>
+<g id="a_proc~~find_nearest~~CallsGraph_node11"><a xlink:href=".././proc/rgb_to_cmyk.html" xlink:title="forcolor::rgb_to_cmyk">
+<polygon fill="#d9534f" stroke="#d9534f" points="701.5,-654 572.5,-654 572.5,-630 701.5,-630 701.5,-654"/>
+<text text-anchor="middle" x="637" y="-639.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">forcolor::rgb_to_cmyk</text>
+</a>
+</g>
+</g>
+<!-- proc~convert&#45;&gt;proc~rgb_to_cmyk -->
+<g id="proc~~find_nearest~~CallsGraph_edge10" class="edge">
+<title>proc~convert&#45;&gt;proc~rgb_to_cmyk</title>
+<path fill="none" stroke="#255000" d="M502.23,-612.04C524.1,-616.93 549.55,-622.63 572.34,-627.74"/>
+<polygon fill="#255000" stroke="#255000" points="571.74,-631.19 582.26,-629.96 573.27,-624.36 571.74,-631.19"/>
+</g>
+<!-- proc~rgb_to_decimal -->
+<g id="proc~~find_nearest~~CallsGraph_node12" class="node">
+<title>proc~rgb_to_decimal</title>
+<g id="a_proc~~find_nearest~~CallsGraph_node12"><a xlink:href=".././proc/rgb_to_decimal.html" xlink:title="forcolor::rgb_to_decimal">
+<polygon fill="#d9534f" stroke="#d9534f" points="708.5,-612 565.5,-612 565.5,-588 708.5,-588 708.5,-612"/>
+<text text-anchor="middle" x="637" y="-597.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">forcolor::rgb_to_decimal</text>
+</a>
+</g>
+</g>
+<!-- proc~convert&#45;&gt;proc~rgb_to_decimal -->
+<g id="proc~~find_nearest~~CallsGraph_edge11" class="edge">
+<title>proc~convert&#45;&gt;proc~rgb_to_decimal</title>
+<path fill="none" stroke="#255000" d="M517.25,-600C529.62,-600 542.62,-600 555.29,-600"/>
+<polygon fill="#255000" stroke="#255000" points="555.37,-603.5 565.37,-600 555.37,-596.5 555.37,-603.5"/>
+</g>
+<!-- proc~rgb_to_hex -->
+<g id="proc~~find_nearest~~CallsGraph_node13" class="node">
+<title>proc~rgb_to_hex</title>
+<g id="a_proc~~find_nearest~~CallsGraph_node13"><a xlink:href=".././proc/rgb_to_hex.html" xlink:title="forcolor::rgb_to_hex">
+<polygon fill="#d9534f" stroke="#d9534f" points="696.5,-570 577.5,-570 577.5,-546 696.5,-546 696.5,-570"/>
+<text text-anchor="middle" x="637" y="-555.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">forcolor::rgb_to_hex</text>
+</a>
+</g>
+</g>
+<!-- proc~convert&#45;&gt;proc~rgb_to_hex -->
+<g id="proc~~find_nearest~~CallsGraph_edge12" class="edge">
+<title>proc~convert&#45;&gt;proc~rgb_to_hex</title>
+<path fill="none" stroke="#255000" d="M502.23,-587.96C524.1,-583.07 549.55,-577.37 572.34,-572.26"/>
+<polygon fill="#255000" stroke="#255000" points="573.27,-575.64 582.26,-570.04 571.74,-568.81 573.27,-575.64"/>
+</g>
+<!-- proc~rgb_to_hsl -->
+<g id="proc~~find_nearest~~CallsGraph_node14" class="node">
+<title>proc~rgb_to_hsl</title>
+<g id="a_proc~~find_nearest~~CallsGraph_node14"><a xlink:href=".././proc/rgb_to_hsl.html" xlink:title="forcolor::rgb_to_hsl">
+<polygon fill="#d9534f" stroke="#d9534f" points="694.5,-528 579.5,-528 579.5,-504 694.5,-504 694.5,-528"/>
+<text text-anchor="middle" x="637" y="-513.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">forcolor::rgb_to_hsl</text>
+</a>
+</g>
+</g>
+<!-- proc~convert&#45;&gt;proc~rgb_to_hsl -->
+<g id="proc~~find_nearest~~CallsGraph_edge13" class="edge">
+<title>proc~convert&#45;&gt;proc~rgb_to_hsl</title>
+<path fill="none" stroke="#255000" d="M465.06,-587.89C485,-573.82 519.96,-550.78 553,-537 558.36,-534.76 564.02,-532.72 569.76,-530.86"/>
+<polygon fill="#255000" stroke="#255000" points="570.91,-534.17 579.46,-527.92 568.87,-527.48 570.91,-534.17"/>
+</g>
+<!-- proc~rgb_to_hsv -->
+<g id="proc~~find_nearest~~CallsGraph_node15" class="node">
+<title>proc~rgb_to_hsv</title>
+<g id="a_proc~~find_nearest~~CallsGraph_node15"><a xlink:href=".././proc/rgb_to_hsv.html" xlink:title="forcolor::rgb_to_hsv">
+<polygon fill="#d9534f" stroke="#d9534f" points="696,-486 578,-486 578,-462 696,-462 696,-486"/>
+<text text-anchor="middle" x="637" y="-471.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">forcolor::rgb_to_hsv</text>
+</a>
+</g>
+</g>
+<!-- proc~convert&#45;&gt;proc~rgb_to_hsv -->
+<g id="proc~~find_nearest~~CallsGraph_edge14" class="edge">
+<title>proc~convert&#45;&gt;proc~rgb_to_hsv</title>
+<path fill="none" stroke="#255000" d="M457.03,-587.83C473.15,-565.8 510.32,-519.31 553,-495 557.76,-492.29 562.88,-489.92 568.14,-487.86"/>
+<polygon fill="#255000" stroke="#255000" points="569.47,-491.1 577.73,-484.46 567.14,-484.5 569.47,-491.1"/>
+</g>
+<!-- proc~rgb_to_xyz -->
+<g id="proc~~find_nearest~~CallsGraph_node16" class="node">
+<title>proc~rgb_to_xyz</title>
+<g id="a_proc~~find_nearest~~CallsGraph_node16"><a xlink:href=".././proc/rgb_to_xyz.html" xlink:title="forcolor::rgb_to_xyz">
+<polygon fill="#d9534f" stroke="#d9534f" points="696,-444 578,-444 578,-420 696,-420 696,-444"/>
+<text text-anchor="middle" x="637" y="-429.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">forcolor::rgb_to_xyz</text>
+</a>
+</g>
+</g>
+<!-- proc~convert&#45;&gt;proc~rgb_to_xyz -->
+<g id="proc~~find_nearest~~CallsGraph_edge15" class="edge">
+<title>proc~convert&#45;&gt;proc~rgb_to_xyz</title>
+<path fill="none" stroke="#255000" d="M453.52,-587.91C465.92,-559.6 500.81,-488.73 553,-453 557.79,-449.72 563.06,-446.95 568.54,-444.61"/>
+<polygon fill="#255000" stroke="#255000" points="569.79,-447.88 577.91,-441.08 567.32,-441.33 569.79,-447.88"/>
+</g>
+<!-- proc~xyz_to_rgb -->
+<g id="proc~~find_nearest~~CallsGraph_node26" class="node">
+<title>proc~xyz_to_rgb</title>
+<g id="a_proc~~find_nearest~~CallsGraph_node26"><a xlink:href=".././proc/xyz_to_rgb.html" xlink:title="forcolor::xyz_to_rgb">
+<polygon fill="#d9534f" stroke="#d9534f" points="696,-402 578,-402 578,-378 696,-378 696,-402"/>
+<text text-anchor="middle" x="637" y="-387.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">forcolor::xyz_to_rgb</text>
+</a>
+</g>
+</g>
+<!-- proc~convert&#45;&gt;proc~xyz_to_rgb -->
+<g id="proc~~find_nearest~~CallsGraph_edge16" class="edge">
+<title>proc~convert&#45;&gt;proc~xyz_to_rgb</title>
+<path fill="none" stroke="#255000" d="M451.63,-587.58C460.85,-553.63 491.24,-458.62 553,-411 557.68,-407.4 562.9,-404.4 568.39,-401.92"/>
+<polygon fill="#255000" stroke="#255000" points="569.8,-405.13 577.82,-398.21 567.23,-398.61 569.8,-405.13"/>
+</g>
+<!-- proc~set_by_name -->
+<g id="proc~~find_nearest~~CallsGraph_node17" class="node">
+<title>proc~set_by_name</title>
+<g id="a_proc~~find_nearest~~CallsGraph_node17"><a xlink:href=".././proc/set_by_name.html" xlink:title="forcolor::color%set_by_name">
+<polygon fill="#d9534f" stroke="#d9534f" points="721,-360 553,-360 553,-336 721,-336 721,-360"/>
+<text text-anchor="middle" x="637" y="-345.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">forcolor::color%set_by_name</text>
+</a>
+</g>
+</g>
+<!-- proc~set&#45;&gt;proc~set_by_name -->
+<g id="proc~~find_nearest~~CallsGraph_edge17" class="edge">
+<title>proc~set&#45;&gt;proc~set_by_name</title>
+<path fill="none" stroke="#025525" stroke-opacity="0.019608" d="M455.05,-213.23C469.3,-238.61 505.66,-297.11 553,-327 555.83,-328.79 558.8,-330.42 561.87,-331.91"/>
+<polygon fill="#025525" fill-opacity="0.019608" stroke="#025525" stroke-opacity="0.019608" points="560.75,-335.24 571.32,-336 563.53,-328.82 560.75,-335.24"/>
+</g>
+<!-- proc~set_cmyk -->
+<g id="proc~~find_nearest~~CallsGraph_node18" class="node">
+<title>proc~set_cmyk</title>
+<g id="a_proc~~find_nearest~~CallsGraph_node18"><a xlink:href=".././proc/set_cmyk.html" xlink:title="forcolor::color%set_cmyk">
+<polygon fill="#d9534f" stroke="#d9534f" points="711,-318 563,-318 563,-294 711,-294 711,-318"/>
+<text text-anchor="middle" x="637" y="-303.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">forcolor::color%set_cmyk</text>
+</a>
+</g>
+</g>
+<!-- proc~set&#45;&gt;proc~set_cmyk -->
+<g id="proc~~find_nearest~~CallsGraph_edge18" class="edge">
+<title>proc~set&#45;&gt;proc~set_cmyk</title>
+<path fill="none" stroke="#025525" stroke-opacity="0.019608" d="M460.14,-213.26C478.26,-231.62 515.09,-266.1 553,-285 557.08,-287.03 561.37,-288.88 565.76,-290.55"/>
+<polygon fill="#025525" fill-opacity="0.019608" stroke="#025525" stroke-opacity="0.019608" points="564.9,-293.96 575.5,-293.96 567.21,-287.35 564.9,-293.96"/>
+</g>
+<!-- proc~set_decimal -->
+<g id="proc~~find_nearest~~CallsGraph_node19" class="node">
+<title>proc~set_decimal</title>
+<g id="a_proc~~find_nearest~~CallsGraph_node19"><a xlink:href=".././proc/set_decimal.html" xlink:title="forcolor::color%set_decimal">
+<polygon fill="#d9534f" stroke="#d9534f" points="718,-276 556,-276 556,-252 718,-252 718,-276"/>
+<text text-anchor="middle" x="637" y="-261.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">forcolor::color%set_decimal</text>
+</a>
+</g>
+</g>
+<!-- proc~set&#45;&gt;proc~set_decimal -->
+<g id="proc~~find_nearest~~CallsGraph_edge19" class="edge">
+<title>proc~set&#45;&gt;proc~set_decimal</title>
+<path fill="none" stroke="#025525" stroke-opacity="0.019608" d="M475.63,-213.07C496.51,-222.08 526.23,-234.28 553,-243 559.8,-245.22 566.98,-247.34 574.15,-249.33"/>
+<polygon fill="#025525" fill-opacity="0.019608" stroke="#025525" stroke-opacity="0.019608" points="573.32,-252.73 583.89,-251.96 575.15,-245.97 573.32,-252.73"/>
+</g>
+<!-- proc~set_hex -->
+<g id="proc~~find_nearest~~CallsGraph_node20" class="node">
+<title>proc~set_hex</title>
+<g id="a_proc~~find_nearest~~CallsGraph_node20"><a xlink:href=".././proc/set_hex.html" xlink:title="forcolor::color%set_hex">
+<polygon fill="#d9534f" stroke="#d9534f" points="706,-234 568,-234 568,-210 706,-210 706,-234"/>
+<text text-anchor="middle" x="637" y="-219.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">forcolor::color%set_hex</text>
+</a>
+</g>
+</g>
+<!-- proc~set&#45;&gt;proc~set_hex -->
+<g id="proc~~find_nearest~~CallsGraph_edge20" class="edge">
+<title>proc~set&#45;&gt;proc~set_hex</title>
+<path fill="none" stroke="#025525" stroke-opacity="0.019608" d="M504.5,-207.27C521.1,-209.13 539.59,-211.2 557.34,-213.19"/>
+<polygon fill="#025525" fill-opacity="0.019608" stroke="#025525" stroke-opacity="0.019608" points="557.36,-216.71 567.69,-214.35 558.14,-209.76 557.36,-216.71"/>
+</g>
+<!-- proc~set_hsl -->
+<g id="proc~~find_nearest~~CallsGraph_node21" class="node">
+<title>proc~set_hsl</title>
+<g id="a_proc~~find_nearest~~CallsGraph_node21"><a xlink:href=".././proc/set_hsl.html" xlink:title="forcolor::color%set_hsl">
+<polygon fill="#d9534f" stroke="#d9534f" points="704,-192 570,-192 570,-168 704,-168 704,-192"/>
+<text text-anchor="middle" x="637" y="-177.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">forcolor::color%set_hsl</text>
+</a>
+</g>
+</g>
+<!-- proc~set&#45;&gt;proc~set_hsl -->
+<g id="proc~~find_nearest~~CallsGraph_edge21" class="edge">
+<title>proc~set&#45;&gt;proc~set_hsl</title>
+<path fill="none" stroke="#025525" stroke-opacity="0.019608" d="M504.5,-194.73C521.8,-192.79 541.16,-190.62 559.59,-188.56"/>
+<polygon fill="#025525" fill-opacity="0.019608" stroke="#025525" stroke-opacity="0.019608" points="560.17,-192.02 569.72,-187.42 559.39,-185.06 560.17,-192.02"/>
+</g>
+<!-- proc~set_hsv -->
+<g id="proc~~find_nearest~~CallsGraph_node22" class="node">
+<title>proc~set_hsv</title>
+<g id="a_proc~~find_nearest~~CallsGraph_node22"><a xlink:href=".././proc/set_hsv.html" xlink:title="forcolor::color%set_hsv">
+<polygon fill="#d9534f" stroke="#d9534f" points="705.5,-150 568.5,-150 568.5,-126 705.5,-126 705.5,-150"/>
+<text text-anchor="middle" x="637" y="-135.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">forcolor::color%set_hsv</text>
+</a>
+</g>
+</g>
+<!-- proc~set&#45;&gt;proc~set_hsv -->
+<g id="proc~~find_nearest~~CallsGraph_edge22" class="edge">
+<title>proc~set&#45;&gt;proc~set_hsv</title>
+<path fill="none" stroke="#025525" stroke-opacity="0.019608" d="M475.63,-188.93C496.51,-179.92 526.23,-167.72 553,-159 559.8,-156.78 566.98,-154.66 574.15,-152.67"/>
+<polygon fill="#025525" fill-opacity="0.019608" stroke="#025525" stroke-opacity="0.019608" points="575.15,-156.03 583.89,-150.04 573.32,-149.27 575.15,-156.03"/>
+</g>
+<!-- proc~set_name -->
+<g id="proc~~find_nearest~~CallsGraph_node23" class="node">
+<title>proc~set_name</title>
+<g id="a_proc~~find_nearest~~CallsGraph_node23"><a xlink:href=".././proc/set_name.html" xlink:title="forcolor::color%set_name">
+<polygon fill="#d9534f" stroke="#d9534f" points="712,-108 562,-108 562,-84 712,-84 712,-108"/>
+<text text-anchor="middle" x="637" y="-93.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">forcolor::color%set_name</text>
+</a>
+</g>
+</g>
+<!-- proc~set&#45;&gt;proc~set_name -->
+<g id="proc~~find_nearest~~CallsGraph_edge23" class="edge">
+<title>proc~set&#45;&gt;proc~set_name</title>
+<path fill="none" stroke="#025525" stroke-opacity="0.019608" d="M460.14,-188.74C478.26,-170.38 515.09,-135.9 553,-117 557.08,-114.97 561.37,-113.12 565.76,-111.45"/>
+<polygon fill="#025525" fill-opacity="0.019608" stroke="#025525" stroke-opacity="0.019608" points="567.21,-114.65 575.5,-108.04 564.9,-108.04 567.21,-114.65"/>
+</g>
+<!-- proc~set_rgb -->
+<g id="proc~~find_nearest~~CallsGraph_node24" class="node">
+<title>proc~set_rgb</title>
+<g id="a_proc~~find_nearest~~CallsGraph_node24"><a xlink:href=".././proc/set_rgb.html" xlink:title="forcolor::color%set_rgb">
+<polygon fill="#d9534f" stroke="#d9534f" points="705.5,-66 568.5,-66 568.5,-42 705.5,-42 705.5,-66"/>
+<text text-anchor="middle" x="637" y="-51.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">forcolor::color%set_rgb</text>
+</a>
+</g>
+</g>
+<!-- proc~set&#45;&gt;proc~set_rgb -->
+<g id="proc~~find_nearest~~CallsGraph_edge24" class="edge">
+<title>proc~set&#45;&gt;proc~set_rgb</title>
+<path fill="none" stroke="#025525" stroke-opacity="0.019608" d="M455.05,-188.77C469.3,-163.39 505.66,-104.89 553,-75 555.83,-73.21 558.8,-71.58 561.87,-70.09"/>
+<polygon fill="#025525" fill-opacity="0.019608" stroke="#025525" stroke-opacity="0.019608" points="563.53,-73.18 571.32,-66 560.75,-66.76 563.53,-73.18"/>
+</g>
+<!-- proc~set_xyz -->
+<g id="proc~~find_nearest~~CallsGraph_node25" class="node">
+<title>proc~set_xyz</title>
+<g id="a_proc~~find_nearest~~CallsGraph_node25"><a xlink:href=".././proc/set_xyz.html" xlink:title="forcolor::color%set_xyz">
+<polygon fill="#d9534f" stroke="#d9534f" points="705,-24 569,-24 569,0 705,0 705,-24"/>
+<text text-anchor="middle" x="637" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">forcolor::color%set_xyz</text>
+</a>
+</g>
+</g>
+<!-- proc~set&#45;&gt;proc~set_xyz -->
+<g id="proc~~find_nearest~~CallsGraph_edge25" class="edge">
+<title>proc~set&#45;&gt;proc~set_xyz</title>
+<path fill="none" stroke="#025525" stroke-opacity="0.019608" d="M452.52,-188.6C463.34,-157.28 496.15,-74.55 553,-33 555.1,-31.47 557.3,-30.04 559.58,-28.72"/>
+<polygon fill="#025525" fill-opacity="0.019608" stroke="#025525" stroke-opacity="0.019608" points="561.34,-31.75 568.7,-24.13 558.19,-25.5 561.34,-31.75"/>
+</g>
+<!-- proc~set_by_name&#45;&gt;proc~initialize_colors -->
+<g id="proc~~find_nearest~~CallsGraph_edge26" class="edge">
+<title>proc~set_by_name&#45;&gt;proc~initialize_colors</title>
+<path fill="none" stroke="#021825" stroke-opacity="0.019608" d="M552.72,-348C492.6,-348 411.87,-348 352.32,-348"/>
+<polygon fill="#021825" fill-opacity="0.019608" stroke="#021825" stroke-opacity="0.019608" points="352.21,-344.5 342.21,-348 352.21,-351.5 352.21,-344.5"/>
+</g>
+</g>
+</svg>
+</div>                <script>
+                  var panprocfind_nearestCallsGraph = svgPanZoom('#procfind_nearestCallsGraph',
+                    {zoomEnabled: true, controlIconsEnabled: true, fit: true, center: true,}
+                  );
+                </script>        <div><a type="button" class="graph-help" data-toggle="modal" href="#CallsGraph-help-text">Help</a></div>
+          <div class="modal fade" id="CallsGraph-help-text" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                  <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
+                </div>
+              <div class="modal-body">
+<p>Nodes of different colours represent the following: </p>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.43.0 (0)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="641pt" height="28pt"
+ viewBox="0.00 0.00 641.00 27.51" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1.16 1.16) rotate(0) translate(4 28)">
+<title>Graph Key</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-28 741.5,-28 741.5,4 -4,4"/>
+<!-- Subroutine -->
+<g id="node1" class="node">
+<title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="70,-24 0,-24 0,0 70,0 70,-24"/>
+<text text-anchor="middle" x="35" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node2" class="node">
+<title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="146,-24 88,-24 88,0 146,0 146,-24"/>
+<text text-anchor="middle" x="117" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Function</text>
+</g>
+<!-- Interface -->
+<g id="node3" class="node">
+<title>Interface</title>
+<polygon fill="#a7506f" stroke="#a7506f" points="225.5,-24 164.5,-24 164.5,0 225.5,0 225.5,-24"/>
+<text text-anchor="middle" x="195" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Interface</text>
+</g>
+<!-- Type Bound Procedure -->
+<g id="node4" class="node">
+<title>Type Bound Procedure</title>
+<polygon fill="#a7506f" stroke="#a7506f" points="374,-24 244,-24 244,0 374,0 374,-24"/>
+<text text-anchor="middle" x="309" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Type Bound Procedure</text>
+</g>
+<!-- Unknown Procedure Type -->
+<g id="node5" class="node">
+<title>Unknown Procedure Type</title>
+<polygon fill="#777777" stroke="#777777" points="537.5,-24 392.5,-24 392.5,0 537.5,0 537.5,-24"/>
+<text text-anchor="middle" x="465" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Unknown Procedure Type</text>
+</g>
+<!-- Program -->
+<g id="node6" class="node">
+<title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="614,-24 556,-24 556,0 614,0 614,-24"/>
+<text text-anchor="middle" x="585" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node7" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="black" points="737.5,-24 632.5,-24 632.5,0 737.5,0 737.5,-24"/>
+<text text-anchor="middle" x="685" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+<p>Solid arrows point from a procedure to one which it calls. Dashed 
+arrows point from an interface to procedures which implement that interface.
+This could include the module procedures in a generic interface or the
+implementation in a submodule of an interface in a parent module.
+</p>
+ Where possible, edges connecting nodes are
+given different colours to make them easier to distinguish in
+large graphs.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header">
+  <h3 class="card-title">Called by</h3>
+      </div>
+      <div class="card-body">
+  <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.43.0 (0)
+ -->
+<!-- Title: proc~~find_nearest~~CalledByGraph Pages: 1 -->
+<svg id="procfind_nearestCalledByGraph" width="283pt" height="32pt"
+ viewBox="0.00 0.00 283.00 32.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="proc~~find_nearest~~CalledByGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 28)">
+<title>proc~~find_nearest~~CalledByGraph</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-28 279,-28 279,4 -4,4"/>
+<!-- proc~find_nearest -->
+<g id="proc~~find_nearest~~CalledByGraph_node1" class="node">
+<title>proc~find_nearest</title>
+<polygon fill="none" stroke="black" points="275,-24 112,-24 112,0 275,0 275,-24"/>
+<text text-anchor="middle" x="193.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50">forcolor::color%find_nearest</text>
+</g>
+<!-- program~demo_color -->
+<g id="proc~~find_nearest~~CalledByGraph_node2" class="node">
+<title>program~demo_color</title>
+<g id="a_proc~~find_nearest~~CalledByGraph_node2"><a xlink:href=".././program/demo_color.html" xlink:title="demo_color">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="76,-24 0,-24 0,0 76,0 76,-24"/>
+<text text-anchor="middle" x="38" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">demo_color</text>
+</a>
+</g>
+</g>
+<!-- program~demo_color&#45;&gt;proc~find_nearest -->
+<g id="proc~~find_nearest~~CalledByGraph_edge1" class="edge">
+<title>program~demo_color&#45;&gt;proc~find_nearest</title>
+<path fill="none" stroke="#255000" d="M76.16,-12C84.09,-12 92.79,-12 101.76,-12"/>
+<polygon fill="#255000" stroke="#255000" points="101.97,-15.5 111.97,-12 101.97,-8.5 101.97,-15.5"/>
+</g>
+</g>
+</svg>
+</div>        <div><a type="button" class="graph-help" data-toggle="modal" href="#CalledByGraph-help-text">Help</a></div>
+          <div class="modal fade" id="CalledByGraph-help-text" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                  <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
+                </div>
+              <div class="modal-body">
+<p>Nodes of different colours represent the following: </p>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.43.0 (0)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="641pt" height="28pt"
+ viewBox="0.00 0.00 641.00 27.51" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1.16 1.16) rotate(0) translate(4 28)">
+<title>Graph Key</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-28 741.5,-28 741.5,4 -4,4"/>
+<!-- Subroutine -->
+<g id="node1" class="node">
+<title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="70,-24 0,-24 0,0 70,0 70,-24"/>
+<text text-anchor="middle" x="35" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node2" class="node">
+<title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="146,-24 88,-24 88,0 146,0 146,-24"/>
+<text text-anchor="middle" x="117" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Function</text>
+</g>
+<!-- Interface -->
+<g id="node3" class="node">
+<title>Interface</title>
+<polygon fill="#a7506f" stroke="#a7506f" points="225.5,-24 164.5,-24 164.5,0 225.5,0 225.5,-24"/>
+<text text-anchor="middle" x="195" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Interface</text>
+</g>
+<!-- Type Bound Procedure -->
+<g id="node4" class="node">
+<title>Type Bound Procedure</title>
+<polygon fill="#a7506f" stroke="#a7506f" points="374,-24 244,-24 244,0 374,0 374,-24"/>
+<text text-anchor="middle" x="309" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Type Bound Procedure</text>
+</g>
+<!-- Unknown Procedure Type -->
+<g id="node5" class="node">
+<title>Unknown Procedure Type</title>
+<polygon fill="#777777" stroke="#777777" points="537.5,-24 392.5,-24 392.5,0 537.5,0 537.5,-24"/>
+<text text-anchor="middle" x="465" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Unknown Procedure Type</text>
+</g>
+<!-- Program -->
+<g id="node6" class="node">
+<title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="614,-24 556,-24 556,0 614,0 614,-24"/>
+<text text-anchor="middle" x="585" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node7" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="black" points="737.5,-24 632.5,-24 632.5,0 737.5,0 737.5,-24"/>
+<text text-anchor="middle" x="685" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+<p>Solid arrows point from a procedure to one which it calls. Dashed 
+arrows point from an interface to procedures which implement that interface.
+This could include the module procedures in a generic interface or the
+implementation in a submodule of an interface in a parent module.
+</p>
+ Where possible, edges connecting nodes are
+given different colours to make them easier to distinguish in
+large graphs.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    <section>
+    <h2><span class="anchor" id="src"></span>Source Code</h2>
+    <div class="hl codehilite"><pre><span></span><span class="w">   </span><span class="k">elemental pure subroutine </span><span class="n">find_nearest</span><span class="p">(</span><span class="n">this</span><span class="p">,</span><span class="w"> </span><span class="n">nearest_color</span><span class="p">)</span>
+<span class="w">      </span><span class="k">class</span><span class="p">(</span><span class="n">color</span><span class="p">),</span><span class="w"> </span><span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">this</span>
+<span class="w">      </span><span class="k">type</span><span class="p">(</span><span class="n">color</span><span class="p">),</span><span class="w">  </span><span class="k">intent</span><span class="p">(</span><span class="n">out</span><span class="p">)</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">nearest_color</span>
+<span class="w">      </span><span class="kt">integer</span><span class="p">(</span><span class="n">ik</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">closestColorIndex</span><span class="p">,</span><span class="w"> </span><span class="n">ri</span><span class="p">,</span><span class="w"> </span><span class="n">gi</span><span class="p">,</span><span class="w"> </span><span class="n">bi</span>
+<span class="w">      </span><span class="kt">real</span><span class="p">(</span><span class="n">rk</span><span class="p">)</span><span class="w">    </span><span class="kd">::</span><span class="w"> </span><span class="n">dist</span><span class="p">,</span><span class="w"> </span><span class="n">min_dist</span>
+<span class="w">      </span><span class="k">type</span><span class="p">(</span><span class="n">color</span><span class="p">),</span><span class="w"> </span><span class="k">dimension</span><span class="p">(:),</span><span class="w"> </span><span class="k">allocatable</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">colors</span>
+
+<span class="w">      </span><span class="k">call </span><span class="n">initialize_colors</span><span class="p">(</span><span class="n">colors</span><span class="p">)</span>
+
+<span class="w">      </span><span class="n">min_dist</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">huge</span><span class="p">(</span><span class="n">min_dist</span><span class="p">)</span>
+<span class="w">      </span><span class="n">closestColorIndex</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
+
+<span class="w">      </span><span class="k">do</span><span class="w"> </span><span class="k">concurrent</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="w"> </span><span class="n">size</span><span class="p">(</span><span class="n">colors</span><span class="p">))</span>
+<span class="w">         </span><span class="k">call </span><span class="n">colors</span><span class="p">(</span><span class="n">i</span><span class="p">)%</span><span class="n">get_rgb</span><span class="p">(</span><span class="n">ri</span><span class="p">,</span><span class="w"> </span><span class="n">gi</span><span class="p">,</span><span class="w"> </span><span class="n">bi</span><span class="p">)</span>
+<span class="w">         </span><span class="n">dist</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">sqrt</span><span class="p">(&amp;</span>
+<span class="w">            </span><span class="p">(</span><span class="kt">real</span><span class="p">((</span><span class="n">ri</span><span class="o">-</span><span class="n">this</span><span class="p">%</span><span class="n">r</span><span class="p">),</span><span class="w"> </span><span class="nb">kind</span><span class="o">=</span><span class="n">rk</span><span class="p">)</span><span class="o">/</span><span class="mi">25</span><span class="mf">5.0_rk</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">&amp;</span>
+<span class="w">            </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="kt">real</span><span class="p">((</span><span class="n">gi</span><span class="o">-</span><span class="n">this</span><span class="p">%</span><span class="n">g</span><span class="p">),</span><span class="w"> </span><span class="nb">kind</span><span class="o">=</span><span class="n">rk</span><span class="p">)</span><span class="o">/</span><span class="mi">25</span><span class="mf">5.0_rk</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">&amp;</span>
+<span class="w">            </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="kt">real</span><span class="p">((</span><span class="n">bi</span><span class="o">-</span><span class="n">this</span><span class="p">%</span><span class="n">b</span><span class="p">),</span><span class="w"> </span><span class="nb">kind</span><span class="o">=</span><span class="n">rk</span><span class="p">)</span><span class="o">/</span><span class="mi">25</span><span class="mf">5.0_rk</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">&amp;</span>
+<span class="w">            </span><span class="p">)</span>
+<span class="w">         </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">dist</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">min_dist</span><span class="p">)</span><span class="w"> </span><span class="k">then</span>
+<span class="k">            </span><span class="n">min_dist</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dist</span>
+<span class="w">            </span><span class="n">closestColorIndex</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span>
+<span class="w">         </span><span class="k">end if</span>
+<span class="k">      end do</span>
+
+<span class="k">      if</span><span class="w"> </span><span class="p">(</span><span class="n">closestColorIndex</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="k">then</span>
+<span class="k">         error stop</span><span class="w"> </span><span class="s1">&#39;error: no color found&#39;</span>
+<span class="w">      </span><span class="k">else</span>
+<span class="k">         </span><span class="n">nearest_color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">colors</span><span class="p">(</span><span class="n">closestColorIndex</span><span class="p">)</span>
+<span class="w">      </span><span class="k">end if</span>
+
+<span class="k">   end subroutine </span><span class="n">find_nearest</span>
+</pre></div>
+
+    </section>
+    <br>
+    
+    </div>
+  </div>
+
+      <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col"><p>ForImage was developed by Seyed Ali Ghasemi<br>&copy; 2023 
+</p>
+          </div>
+          <div class="col">
+            <p class="text-end">
+              Documentation generated by
+              <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+ on 2023-11-24T10:49:13.661791             </p>
+          </div>
+        </div>
+        <br>
+      </div> <!-- /container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
+
+    <!-- MathJax JavaScript
+             ================================================== -->
+             <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+          TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+          jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+          extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+          });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+          <script src="../tipuesearch/tipuesearch_content.js"></script>
+          <script src="../tipuesearch/tipuesearch_set.js"></script>
+          <script src="../tipuesearch/tipuesearch.js"></script>
+
+  </body>
+</html>
