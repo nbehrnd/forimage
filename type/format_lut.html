@@ -1,3 +1,5 @@
+<!-- -*- mode: jinja2 -*- -->
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -17,7 +19,8 @@
     <link href="../css/local.css" rel="stylesheet">
       <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
 
-    <script src="https://code.jquery.com/jquery-3.7.0.slim.min.js" integrity="sha256-tG5mcZUtJsZvyKAxYLVXrmjKBVLd6VpVccqz/r4ypFE=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
   </head>
 
   <body>
@@ -116,7 +119,7 @@
         <div class="list-group list-group-flush">
             <a class="list-group-item" href="../type/format_lut.html#variable-num_colors">num_colors</a>
             <a class="list-group-item" href="../type/format_lut.html#variable-dim_colors">dim_colors</a>
-            <a class="list-group-item" href="../type/format_lut.html#variable-colors">colors</a>
+            <a class="list-group-item" href="../type/format_lut.html#variable-colors~6">colors</a>
         </div>
       </div>
     </div>
@@ -173,7 +176,8 @@
     </div>
     
     <div class="col-md-9" id='text'>
-      <h2>type, public :: format_lut</h2>
+      <h2>
+        type, public :: format_lut</h2>
     
     <br>
 
@@ -225,7 +229,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-colors"></span>
+              <span class="anchor" id="variable-colors~6"></span>
               integer,
             </td>
               <td>public,</td>
@@ -286,7 +290,7 @@
         <tr>
             <td>
               <span class="anchor" ></span>
-              class(<a href='../type/format_lut.html'>format_lut</a>),
+              class(<a href='format_lut.html'>format_lut</a>),
             </td>
 <td>intent(inout)</td>
               <td></td>            <td>
@@ -343,7 +347,7 @@
         <tr>
             <td>
               <span class="anchor" ></span>
-              class(<a href='../type/format_lut.html'>format_lut</a>),
+              class(<a href='format_lut.html'>format_lut</a>),
             </td>
 <td>intent(inout)</td>
               <td></td>            <td>
@@ -445,7 +449,7 @@
         <tr>
             <td>
               <span class="anchor" ></span>
-              class(<a href='../type/format_lut.html'>format_lut</a>),
+              class(<a href='format_lut.html'>format_lut</a>),
             </td>
 <td>intent(inout)</td>
               <td></td>            <td>
@@ -517,7 +521,7 @@
         <tr>
             <td>
               <span class="anchor" ></span>
-              class(<a href='../type/format_lut.html'>format_lut</a>),
+              class(<a href='format_lut.html'>format_lut</a>),
             </td>
 <td>intent(in)</td>
               <td></td>            <td>
@@ -579,7 +583,7 @@
         <tr>
             <td>
               <span class="anchor" ></span>
-              class(<a href='../type/format_lut.html'>format_lut</a>),
+              class(<a href='format_lut.html'>format_lut</a>),
             </td>
 <td>intent(inout)</td>
               <td></td>            <td>
@@ -651,7 +655,7 @@
         <tr>
             <td>
               <span class="anchor" ></span>
-              class(<a href='../type/format_lut.html'>format_lut</a>),
+              class(<a href='format_lut.html'>format_lut</a>),
             </td>
 <td>intent(in)</td>
               <td></td>            <td>
@@ -713,7 +717,7 @@
         <tr>
             <td>
               <span class="anchor" ></span>
-              class(<a href='../type/format_lut.html'>format_lut</a>),
+              class(<a href='format_lut.html'>format_lut</a>),
             </td>
 <td>intent(inout)</td>
               <td></td>            <td>
@@ -785,7 +789,7 @@
         <tr>
             <td>
               <span class="anchor" ></span>
-              class(<a href='../type/format_lut.html'>format_lut</a>),
+              class(<a href='format_lut.html'>format_lut</a>),
             </td>
 <td>intent(in)</td>
               <td></td>            <td>
@@ -847,7 +851,7 @@
         <tr>
             <td>
               <span class="anchor" ></span>
-              class(<a href='../type/format_lut.html'>format_lut</a>),
+              class(<a href='format_lut.html'>format_lut</a>),
             </td>
 <td>intent(inout)</td>
               <td></td>            <td>
@@ -919,7 +923,7 @@
         <tr>
             <td>
               <span class="anchor" ></span>
-              class(<a href='../type/format_lut.html'>format_lut</a>),
+              class(<a href='format_lut.html'>format_lut</a>),
             </td>
 <td>intent(inout)</td>
               <td></td>            <td>
@@ -976,7 +980,7 @@
       <span class="anchor" id="boundprocedure-finalize~2"></span>
       <h3>
           procedure, public ::
-  <strong>finalize</strong> => <a href='../proc/deallocate_lut.html'>deallocate_lut</a>
+  <strong>finalize</strong> => <a href='/home/runner/work/forimage/forimage/doc/proc/deallocate_lut.html'>deallocate_lut</a>
         
       </h3>
     </div>
@@ -1006,7 +1010,7 @@
         <tr>
             <td>
               <span class="anchor" ></span>
-              class(<a href='../type/format_lut.html'>format_lut</a>),
+              class(<a href='format_lut.html'>format_lut</a>),
             </td>
 <td>intent(inout)</td>
               <td></td>            <td>
@@ -1067,7 +1071,7 @@
             <p class="text-end">
               Documentation generated by
               <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
- on 2023-11-24T10:49:13.661791             </p>
+ on 2024-01-18T15:26:14.530358             </p>
           </div>
         </div>
         <br>
